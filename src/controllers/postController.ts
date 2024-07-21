@@ -104,7 +104,21 @@ export const getUserPhotoPosts = async (req: Request, res: Response) => {
 export const updatePhotoPost = async (req: Request, res: Response) => {
     try {
         const { id } = req.params;
-        const { title, likes, views, description, location, geometry, authorId, images, isEdit } = req.body;
+        const { title, likes, views, description, location, geometry, authorId, imageIds, isEdit } = req.body;
+
+        // 從數據庫中獲取當前的圖片 IDs
+        const currentPost = await prisma.photoPost.findUnique({
+            where: { id: Number(id) },
+            include: {
+                images: true
+            }
+        });
+
+        const currentImageIds = currentPost?.images.map(image => image.id) || [];
+
+        // 準備要連接和斷開連接的 IDs
+        const imagesToConnect = imageIds.filter((id: number) => !currentImageIds.includes(id));
+        const imagesToDisconnect = currentImageIds.filter(id => !imageIds.includes(id));
 
         const updatedPhotoPost = await prisma.photoPost.update({
             where: { id: Number(id) },
@@ -118,12 +132,8 @@ export const updatePhotoPost = async (req: Request, res: Response) => {
                 authorId,
                 isEdit,
                 images: {
-                    deleteMany: {}, // 刪除現有的 images
-                    create: images.map((image: { url: string; filename: string; publicId: string }) => ({
-                        url: image.url,
-                        filename: image.filename,
-                        publicId: image.publicId, // 確保 publicId 被正確傳遞
-                    })),
+                    connect: imagesToConnect.map((id: number) => ({ id })),
+                    disconnect: imagesToDisconnect.map((id: number) => ({ id })),
                 },
             },
         });
@@ -134,6 +144,7 @@ export const updatePhotoPost = async (req: Request, res: Response) => {
         res.status(500).json({ status: 500, message: error.message || '內部伺服器錯誤' });
     }
 };
+
 
 // 刪除照片帖子
 export const deletePhotoPost = async (req: Request, res: Response) => {

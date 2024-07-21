@@ -118,6 +118,20 @@ export const updateCommunityPost = async (req: Request, res: Response) => {
         const { id } = req.params;
         const { title, content, topicTags, isEdit, imageIds } = req.body;
 
+        // 從數據庫中獲取當前的圖片 IDs
+        const currentPost = await prisma.communityPost.findUnique({
+            where: { id: Number(id) },
+            include: {
+                images: true
+            }
+        });
+
+        const currentImageIds = currentPost?.images.map(image => image.id) || [];
+
+        // 準備要連接和斷開連接的 IDs
+        const imagesToConnect = imageIds.filter((id: number) => !currentImageIds.includes(id));
+        const imagesToDisconnect = currentImageIds.filter(id => !imageIds.includes(id));
+
         const updatedCommunityPost = await prisma.communityPost.update({
             where: { id: Number(id) },
             data: {
@@ -126,9 +140,8 @@ export const updateCommunityPost = async (req: Request, res: Response) => {
                 topicTags,
                 isEdit,
                 images: {
-                    connect: imageIds.map((id: number) => ({
-                        id,
-                    })),
+                    connect: imagesToConnect.map((id: number) => ({ id })),
+                    disconnect: imagesToDisconnect.map((id: number) => ({ id })),
                 },
             },
         });
@@ -139,6 +152,7 @@ export const updateCommunityPost = async (req: Request, res: Response) => {
         res.status(500).json({ status: 500, message: error.message || '內部伺服器錯誤' });
     }
 };
+
 
 // 刪除社區帖子
 export const deleteCommunityPost = async (req: Request, res: Response) => {
