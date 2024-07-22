@@ -117,6 +117,20 @@ export const getAllArticles = async (req: Request, res: Response) => {
             orderBy: {
                 createdAt: 'desc',
             },
+            select: {
+                id: true,
+                title: true,
+                comments: {
+                    select: {
+                        id: true
+                    }
+                },
+                topicTags: true,
+                coverImage: true,
+                views: true,
+                likes: true
+
+            },
         });
 
         res.status(200).json({ status: 200, success: true, articles });
