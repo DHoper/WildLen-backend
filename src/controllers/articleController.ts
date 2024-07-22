@@ -128,7 +128,8 @@ export const getAllArticles = async (req: Request, res: Response) => {
                 topicTags: true,
                 coverImage: true,
                 views: true,
-                likes: true
+                likes: true,
+                createdAt: true
 
             },
         });
