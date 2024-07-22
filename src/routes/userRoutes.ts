@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { checkEmail, deleteUser, getAllUsers, getUserById, getUserByToken, loginUser, registerUser, updateUser } from '../controllers/userController';
+import { checkEmail, deleteUser, getAllUsers, getUserById, getUserByToken, loginUser, registerUser, updateUser, updateUserById } from '../controllers/userController';
 
 const router = Router();
 
@@ -13,6 +13,7 @@ router.get('/user/checkEmail/:email', checkEmail);
 
 //------------------後台--------------------//
 router.get('/users', getAllUsers);
+router.put('/user/:id', updateUserById);
 router.delete('/user/:id', deleteUser);
 
 export default router;

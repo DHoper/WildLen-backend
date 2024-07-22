@@ -203,6 +203,46 @@ export const getAllUsers = async (req: Request, res: Response) => {
     }
 };
 
+export const updateUserById = async (req: Request, res: Response) => {
+    try {
+        const userId = parseInt(req.params.id);
+        const { email, username, profile } = req.body;
+        const { selectedAvatarIndex, selectedTags, intro, interestedTopics } = profile;
+
+        // 檢查用戶是否存在
+        const existingUser = await prisma.user.findUnique({ where: { id: userId } });
+        if (!existingUser) {
+            return res.status(404).json({ status: 404, message: '找不到用戶' });
+        }
+
+        // 更新用戶資料
+        const updatedUser = await prisma.user.update({
+            where: { id: userId },
+            data: {
+                email,  // 根據需要更新 email 或其他字段
+                username,
+                profile: {
+                    update: {
+                        selectedAvatarIndex,
+                        selectedTags,
+                        intro,
+                        interestedTopics
+                    }
+                }
+            },
+            include: {
+                profile: true
+            }
+        });
+
+        res.status(200).json({ status: 200, user: updatedUser, message: '用戶資料更新成功' });
+    } catch (error: any) {
+        console.error("更新用戶資料時發生錯誤:", error);
+        res.status(500).json({ status: 500, message: error.message || '內部伺服器錯誤' });
+    }
+};
+
+
 // 刪除用戶
 export const deleteUser = async (req: Request, res: Response) => {
     try {
