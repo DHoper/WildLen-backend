@@ -242,6 +242,36 @@ export const updateUserById = async (req: Request, res: Response) => {
     }
 };
 
+export const updateUserPasswordById = async (req: Request, res: Response) => {
+    try {
+        const userId = parseInt(req.params.id); 
+        const { newPassword } = req.body;       
+
+        if (!newPassword || newPassword.length < 6) {
+            return res.status(400).json({ status: 400, message: '新密碼應至少為 6 個字符' });
+        }
+
+        // 加密新密碼
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        // 更新用戶密碼
+        const updatedUser = await prisma.user.update({
+            where: { id: userId },
+            data: {
+                password: hashedPassword
+            }
+        });
+
+        if (updatedUser) {
+            res.status(200).json({ status: 200, message: '密碼更新成功' });
+        } else {
+            res.status(404).json({ status: 404, message: '未找到用戶' });
+        }
+    } catch (error: any) {
+        console.error("更新密碼時發生錯誤:", error);
+        res.status(500).json({ status: 500, message: error.message || '內部伺服器錯誤' });
+    }
+};
 
 // 刪除用戶
 export const deleteUser = async (req: Request, res: Response) => {
