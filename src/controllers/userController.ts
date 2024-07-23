@@ -247,10 +247,6 @@ export const updateUserPasswordById = async (req: Request, res: Response) => {
         const userId = parseInt(req.params.id); 
         const { newPassword } = req.body;       
 
-        if (!newPassword || newPassword.length < 6) {
-            return res.status(400).json({ status: 400, message: '新密碼應至少為 6 個字符' });
-        }
-
         // 加密新密碼
         const hashedPassword = await bcrypt.hash(newPassword, 10);
 
