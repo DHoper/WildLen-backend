@@ -38,15 +38,10 @@ export const getAllPhotoPosts = async (req: Request, res: Response) => {
             orderBy: {
                 createdAt: 'desc',
             },
-            select: {
-                id: true,
-                title: true,
-                geometry: true,
-                location: true,
+            include: {
                 images: {
                     take: 1,
                 },
-                createdAt: true
             },
         });
         res.status(200).json(posts);
