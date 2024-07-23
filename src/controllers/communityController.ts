@@ -35,8 +35,8 @@ export const getAllCommunityPosts = async (req: Request, res: Response) => {
     try {
         const { startFromLast } = req.params;
 
-        const take = 6; // 每次取六筆
-        const skip = startFromLast ? Number(startFromLast) : 0; // 從倒數第幾筆開始返回
+        const take = startFromLast ? 6 : undefined;
+        const skip = startFromLast ? Number(startFromLast) : 0;
 
         const [posts, totalCount] = await Promise.all([
             prisma.communityPost.findMany({
@@ -51,10 +51,10 @@ export const getAllCommunityPosts = async (req: Request, res: Response) => {
                 orderBy: {
                     createdAt: 'desc',
                 },
-                take,
+                take, 
                 skip,
             }),
-            prisma.communityPost.count(), // 獲取總筆數
+            prisma.communityPost.count(),
         ]);
 
         res.status(200).json({ posts, totalCount });
@@ -63,6 +63,7 @@ export const getAllCommunityPosts = async (req: Request, res: Response) => {
         res.status(500).json({ status: 500, message: error.message || '內部伺服器錯誤' });
     }
 };
+
 
 
 // 根據ID獲取單個社區帖子
