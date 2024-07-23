@@ -46,6 +46,7 @@ export const getAllPhotoPosts = async (req: Request, res: Response) => {
                 images: {
                     take: 1,
                 },
+                createdAt: true
             },
         });
         res.status(200).json(posts);
