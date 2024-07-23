@@ -245,6 +245,8 @@ export const updateUserById = async (req: Request, res: Response) => {
 export const updateUserPasswordById = async (req: Request, res: Response) => {
     try {
         const userId = parseInt(req.params.id); 
+        console.log(req.body);
+        
         const { newPassword } = req.body;       
 
         // 加密新密碼
