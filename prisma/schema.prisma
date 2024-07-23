@@ -185,7 +185,7 @@ model ArticleComment {
   content   String
   likes     Int     @default(0)
   article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
-  User      User?   @relation(fields: [userId], references: [id])
+  User      User?   @relation(fields: [userId], references: [id], onDelete: Cascade)
   userId    Int?
 
   createdAt DateTime @default(now())
