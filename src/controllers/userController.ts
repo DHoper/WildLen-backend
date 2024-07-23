@@ -115,7 +115,7 @@ export const getUserByToken = async (req: Request, res: Response) => {
         console.error('獲取用戶訊息失敗:', error);
         if (error.name === 'JsonWebTokenError' || error.name === 'TokenExpiredError') {
             // Token 無效之處理
-            return res.status(401).json({ status: 401, message: 'Token 無效或過期' });
+            return res.status(200).json({ status: 200, message: 'Token 無效或過期' });
         }
         res.status(500).json({ status: 500, message: error.message || '内部伺服器錯誤' });
     }
