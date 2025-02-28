@@ -1,7 +1,9 @@
 {
   "scripts": {
-    "dev": "nodemon --exec ts-node --transpile-only src/server.ts",
-    "start": "ts-node --transpile-only src/server.ts"
+    "postinstall": "prisma generate",
+    "build": "npx prisma generate && tsc",
+    "dev": "npx prisma generate && nodemon --exec ts-node --transpile-only src/server.ts",
+    "start": "npx prisma generate && ts-node --transpile-only src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.16.2",
