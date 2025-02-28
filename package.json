@@ -3,8 +3,8 @@
     "node": "20.x"
   },
   "scripts": {
-    "dev": "nodemon src/server.ts",
-    "start": "ts-node src/server.ts"
+    "dev": "nodemon --exec ts-node --transpile-only src/server.ts",
+    "start": "ts-node --transpile-only src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.16.2",
