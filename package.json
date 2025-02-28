@@ -1,9 +1,9 @@
 {
   "scripts": {
     "postinstall": "prisma generate",
-    "build": "npx prisma generate && tsc",
-    "dev": "npx prisma generate && nodemon --exec ts-node --transpile-only src/server.ts",
-    "start": "npx prisma generate && ts-node --transpile-only src/server.ts"
+    "build": "npx prisma generate && tsc --skipLibCheck",
+    "dev": "npx prisma generate && nodemon --exec ts-node --transpile-only --skipProject src/server.ts",
+    "start": "npx prisma generate && ts-node --transpile-only --skipProject src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^5.16.2",
