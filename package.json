@@ -4,7 +4,8 @@
   },
   "scripts": {
     "dev": "nodemon --exec ts-node --transpile-only src/server.ts",
-    "start": "ts-node --transpile-only src/server.ts"
+    "start": "ts-node --transpile-only src/server.ts",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^5.16.2",
