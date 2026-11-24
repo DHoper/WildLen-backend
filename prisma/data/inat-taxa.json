@@ -1,0 +1,2396 @@
+[
+ {
+  "id": 39,
+  "scientificName": "Grus japonensis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Red-crowned Crane",
+   "zhTW": "丹頂鶴",
+   "zh": "丹顶鹤",
+   "ja": "タンチョウ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Grus japonensis"
+ },
+ {
+  "id": 53,
+  "scientificName": "Balearica regulorum",
+  "iconic": "Aves",
+  "names": {
+   "en": "Gray Crowned-Crane",
+   "zhTW": "灰冠鶴",
+   "zh": "灰冕鹤",
+   "ja": "ホオジロカンムリヅル"
+  },
+  "iucn": "EN",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Balearica regulorum"
+ },
+ {
+  "id": 906,
+  "scientificName": "Meleagris gallopavo",
+  "iconic": "Aves",
+  "names": {
+   "en": "Wild Turkey",
+   "zhTW": "火雞",
+   "zh": "火鸡",
+   "ja": "シチメンチョウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Meleagris gallopavo"
+ },
+ {
+  "id": 931,
+  "scientificName": "Lagopus lagopus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Willow Ptarmigan",
+   "zhTW": "柳雷鳥",
+   "zh": "柳雷鸟",
+   "ja": "カラフトライチョウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lagopus lagopus"
+ },
+ {
+  "id": 1094,
+  "scientificName": "Lophura swinhoii",
+  "iconic": "Aves",
+  "names": {
+   "en": "Swinhoe's Pheasant",
+   "zhTW": "藍腹鷴",
+   "zh": "蓝腹鹇",
+   "ja": "サンケイ"
+  },
+  "iucn": "NT",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lophura swinhoii"
+ },
+ {
+  "id": 1406,
+  "scientificName": "Callipepla gambelii",
+  "iconic": "Aves",
+  "names": {
+   "en": "Gambel's Quail",
+   "zhTW": null,
+   "zh": "黑腹翎鹑",
+   "ja": "ズアカカンムリウズラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Callipepla gambelii"
+ },
+ {
+  "id": 2269,
+  "scientificName": "Coracias caudatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Lilac-breasted Roller",
+   "zhTW": "燕尾佛法僧",
+   "zh": "紫胸佛法僧",
+   "ja": "ライラックニシブッポウソウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Coracias caudatus"
+ },
+ {
+  "id": 2481,
+  "scientificName": "Todiramphus macleayii",
+  "iconic": "Aves",
+  "names": {
+   "en": "Forest Kingfisher",
+   "zhTW": "林翡翠",
+   "zh": "林翡翠",
+   "ja": "モリショウビン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Todiramphus macleayii"
+ },
+ {
+  "id": 2927,
+  "scientificName": "Streptopelia orientalis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Oriental Turtle-Dove",
+   "zhTW": "金背鳩",
+   "zh": "山斑鸠",
+   "ja": "キジバト"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Streptopelia orientalis"
+ },
+ {
+  "id": 3731,
+  "scientificName": "Platalea leucorodia",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eurasian Spoonbill",
+   "zhTW": "白琵鷺",
+   "zh": "白琵鹭",
+   "ja": "ヘラサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Platalea leucorodia"
+ },
+ {
+  "id": 3734,
+  "scientificName": "Platalea alba",
+  "iconic": "Aves",
+  "names": {
+   "en": "African Spoonbill",
+   "zhTW": "非洲琵鷺",
+   "zh": "非洲琵鹭",
+   "ja": "アフリカヘラサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Platalea alba"
+ },
+ {
+  "id": 3739,
+  "scientificName": "Threskiornis aethiopicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "African Sacred Ibis",
+   "zhTW": "埃及聖鹮",
+   "zh": "非洲白鹮",
+   "ja": "アフリカクロトキ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Threskiornis aethiopicus"
+ },
+ {
+  "id": 3756,
+  "scientificName": "Plegadis falcinellus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Glossy Ibis",
+   "zhTW": "彩䴉",
+   "zh": "彩鹮",
+   "ja": "ブロンズトキ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Plegadis falcinellus"
+ },
+ {
+  "id": 3856,
+  "scientificName": "Calidris maritima",
+  "iconic": "Aves",
+  "names": {
+   "en": "Purple Sandpiper",
+   "zhTW": "紫濱鷸",
+   "zh": "紫滨鹬",
+   "ja": "ムラサキハマシギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Calidris maritima"
+ },
+ {
+  "id": 4088,
+  "scientificName": "Thalassarche cauta",
+  "iconic": "Aves",
+  "names": {
+   "en": "Shy Albatross",
+   "zhTW": null,
+   "zh": "白顶信天翁",
+   "ja": "ハジロアホウドリ"
+  },
+  "iucn": "NT",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Thalassarche cauta"
+ },
+ {
+  "id": 4168,
+  "scientificName": "Daption capense",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pintado Petrel",
+   "zhTW": null,
+   "zh": "花斑鹱",
+   "ja": "マダラフルマカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Daption capense"
+ },
+ {
+  "id": 4197,
+  "scientificName": "Macronectes halli",
+  "iconic": "Aves",
+  "names": {
+   "en": "Northern Giant Petrel",
+   "zhTW": null,
+   "zh": "霍氏巨鹱",
+   "ja": "キタオオフルマカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Macronectes halli"
+ },
+ {
+  "id": 4237,
+  "scientificName": "Tachybaptus ruficollis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Little Grebe",
+   "zhTW": "小鸊鷉",
+   "zh": "小䴙䴘",
+   "ja": "カイツブリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tachybaptus ruficollis"
+ },
+ {
+  "id": 4270,
+  "scientificName": "Phalacrocorax carbo",
+  "iconic": "Aves",
+  "names": {
+   "en": "Great Cormorant",
+   "zhTW": "鸕鷀",
+   "zh": "普通鸬鹚",
+   "ja": "カワウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phalacrocorax carbo"
+ },
+ {
+  "id": 4292,
+  "scientificName": "Phalacrocorax punctatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Spotted Shag",
+   "zhTW": null,
+   "zh": "点斑鸬鹚",
+   "ja": "ゴマダラウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phalacrocorax punctatus"
+ },
+ {
+  "id": 4293,
+  "scientificName": "Phalacrocorax capillatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Japanese Cormorant",
+   "zhTW": "丹氏鸕鷀",
+   "zh": "暗绿背鸬鹚",
+   "ja": "ウミウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phalacrocorax capillatus"
+ },
+ {
+  "id": 4326,
+  "scientificName": "Pelecanus conspicillatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Australian Pelican",
+   "zhTW": "澳洲鵜鶘",
+   "zh": "澳洲鹈鹕",
+   "ja": "コシグロペリカン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pelecanus conspicillatus"
+ },
+ {
+  "id": 4349,
+  "scientificName": "Larus hyperboreus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Glaucous Gull",
+   "zhTW": "北極鷗",
+   "zh": "北极鸥",
+   "ja": "シロカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Larus hyperboreus"
+ },
+ {
+  "id": 4366,
+  "scientificName": "Larus schistisagus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Slaty-backed Gull",
+   "zhTW": "灰背鷗",
+   "zh": "灰背鸥",
+   "ja": "オオセグロカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Larus schistisagus"
+ },
+ {
+  "id": 4368,
+  "scientificName": "Larus marinus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Great Black-backed Gull",
+   "zhTW": "大黑背鷗",
+   "zh": "大黑背鸥",
+   "ja": "オオカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Larus marinus"
+ },
+ {
+  "id": 4370,
+  "scientificName": "Larus crassirostris",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-tailed Gull",
+   "zhTW": "黑尾鷗",
+   "zh": "黑尾鸥",
+   "ja": "ウミネコ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Larus crassirostris"
+ },
+ {
+  "id": 4390,
+  "scientificName": "Larus pacificus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pacific Gull",
+   "zhTW": null,
+   "zh": "太平洋鸥",
+   "ja": "ハシブトカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Larus pacificus"
+ },
+ {
+  "id": 4494,
+  "scientificName": "Rissa tridactyla",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-legged Kittiwake",
+   "zhTW": "三趾鷗",
+   "zh": "三趾鸥",
+   "ja": "ミツユビカモメ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Rissa tridactyla"
+ },
+ {
+  "id": 4504,
+  "scientificName": "Fratercula arctica",
+  "iconic": "Aves",
+  "names": {
+   "en": "Atlantic Puffin",
+   "zhTW": "北極海鸚",
+   "zh": "北极海鹦",
+   "ja": "ニシツノメドリ"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fratercula arctica"
+ },
+ {
+  "id": 4582,
+  "scientificName": "Irediparra gallinacea",
+  "iconic": "Aves",
+  "names": {
+   "en": "Comb-crested Jacana",
+   "zhTW": null,
+   "zh": "冠水雉",
+   "ja": "トサカレンカク"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Irediparra gallinacea"
+ },
+ {
+  "id": 4585,
+  "scientificName": "Actophilornis africanus",
+  "iconic": "Aves",
+  "names": {
+   "en": "African Jacana",
+   "zhTW": "長腳雉鴴",
+   "zh": "非洲雉鸻",
+   "ja": "アフリカレンカク"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Actophilornis africanus"
+ },
+ {
+  "id": 4835,
+  "scientificName": "Himantopus himantopus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-winged Stilt",
+   "zhTW": "高蹺鴴",
+   "zh": "黑翅长脚鹬",
+   "ja": "セイタカシギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Himantopus himantopus"
+ },
+ {
+  "id": 4846,
+  "scientificName": "Haematopus longirostris",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pied Oystercatcher",
+   "zhTW": null,
+   "zh": "澳洲斑蛎鹬",
+   "ja": "オーストラリアミヤコドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haematopus longirostris"
+ },
+ {
+  "id": 4848,
+  "scientificName": "Haematopus unicolor",
+  "iconic": "Aves",
+  "names": {
+   "en": "Variable Oystercatcher",
+   "zhTW": "新西蘭蠣鷸",
+   "zh": "新西兰蛎鹬",
+   "ja": "ニュージーランドミヤコドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haematopus unicolor"
+ },
+ {
+  "id": 4868,
+  "scientificName": "Vanellus senegallus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Wattled Lapwing",
+   "zhTW": "黑喉肉垂麥雞",
+   "zh": "黑喉麦鸡",
+   "ja": "トサカゲリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Vanellus senegallus"
+ },
+ {
+  "id": 4896,
+  "scientificName": "Pluvialis fulva",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pacific Golden-Plover",
+   "zhTW": "太平洋金斑鴴",
+   "zh": "金鸻",
+   "ja": "ムナグロ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pluvialis fulva"
+ },
+ {
+  "id": 4943,
+  "scientificName": "Egretta garzetta",
+  "iconic": "Aves",
+  "names": {
+   "en": "Little Egret",
+   "zhTW": "小白鷺",
+   "zh": "小白鹭",
+   "ja": "コサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Egretta garzetta"
+ },
+ {
+  "id": 4947,
+  "scientificName": "Egretta sacra",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pacific Reef Heron",
+   "zhTW": "岩鷺",
+   "zh": "岩鹭",
+   "ja": "クロサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Egretta sacra"
+ },
+ {
+  "id": 4954,
+  "scientificName": "Ardea cinerea",
+  "iconic": "Aves",
+  "names": {
+   "en": "Grey Heron",
+   "zhTW": "蒼鷺",
+   "zh": "苍鹭",
+   "ja": "アオサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardea cinerea"
+ },
+ {
+  "id": 4981,
+  "scientificName": "Nycticorax nycticorax",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-crowned Night Heron",
+   "zhTW": "夜鷺",
+   "zh": "夜鹭",
+   "ja": "ゴイサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nycticorax nycticorax"
+ },
+ {
+  "id": 4988,
+  "scientificName": "Nycticorax caledonicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Nankeen Night Heron",
+   "zhTW": "棕夜鷺",
+   "zh": "棕夜鹭",
+   "ja": "ハシブトゴイ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Nycticorax caledonicus"
+ },
+ {
+  "id": 5061,
+  "scientificName": "Anhinga novaehollandiae",
+  "iconic": "Aves",
+  "names": {
+   "en": "Australasian Darter",
+   "zhTW": "澳洲蛇鵜",
+   "zh": "澳洲蛇鹈",
+   "ja": "オーストラリアヘビウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anhinga novaehollandiae"
+ },
+ {
+  "id": 5063,
+  "scientificName": "Anhinga anhinga",
+  "iconic": "Aves",
+  "names": {
+   "en": "Anhinga",
+   "zhTW": "美洲蛇鵜",
+   "zh": "美洲蛇鹈",
+   "ja": "アメリカヘビウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anhinga anhinga"
+ },
+ {
+  "id": 5079,
+  "scientificName": "Aquila rapax",
+  "iconic": "Aves",
+  "names": {
+   "en": "Tawny Eagle",
+   "zhTW": "非洲草原雕",
+   "zh": "茶色雕",
+   "ja": "アフリカソウゲンワシ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Aquila rapax"
+ },
+ {
+  "id": 5206,
+  "scientificName": "Buteo lineatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Red-shouldered Hawk",
+   "zhTW": "赤肩鵟",
+   "zh": "赤肩鵟",
+   "ja": "カタアカノスリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Buteo lineatus"
+ },
+ {
+  "id": 5268,
+  "scientificName": "Milvus migrans",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black Kite",
+   "zhTW": "黑鳶",
+   "zh": "黑鸢",
+   "ja": "トビ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Milvus migrans"
+ },
+ {
+  "id": 5304,
+  "scientificName": "Haliaeetus pelagicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Steller's Sea-Eagle",
+   "zhTW": "虎頭海鵰",
+   "zh": "虎头海雕",
+   "ja": "オオワシ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haliaeetus pelagicus"
+ },
+ {
+  "id": 5305,
+  "scientificName": "Haliaeetus leucocephalus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Bald Eagle",
+   "zhTW": null,
+   "zh": "白头海雕",
+   "ja": "ハクトウワシ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haliaeetus leucocephalus"
+ },
+ {
+  "id": 5309,
+  "scientificName": "Haliaeetus albicilla",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-tailed Eagle",
+   "zhTW": "白尾海鵰",
+   "zh": "白尾海雕",
+   "ja": "オジロワシ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haliaeetus albicilla"
+ },
+ {
+  "id": 5407,
+  "scientificName": "Haliastur sphenurus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Whistling Kite",
+   "zhTW": null,
+   "zh": "啸鸢",
+   "ja": "フエフキトビ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Haliastur sphenurus"
+ },
+ {
+  "id": 6895,
+  "scientificName": "Dendrocygna eytoni",
+  "iconic": "Aves",
+  "names": {
+   "en": "Plumed Whistling-Duck",
+   "zhTW": null,
+   "zh": "尖羽树鸭",
+   "ja": "カザリリュウキュウガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Dendrocygna eytoni"
+ },
+ {
+  "id": 6898,
+  "scientificName": "Dendrocygna viduata",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-faced Whistling-Duck",
+   "zhTW": "白臉樹鴨",
+   "zh": "白脸树鸭",
+   "ja": "シロガオリュウキュウガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Dendrocygna viduata"
+ },
+ {
+  "id": 6905,
+  "scientificName": "Anseranas semipalmata",
+  "iconic": "Aves",
+  "names": {
+   "en": "Magpie Goose",
+   "zhTW": null,
+   "zh": "鹊雁",
+   "ja": "カササギガン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anseranas semipalmata"
+ },
+ {
+  "id": 6915,
+  "scientificName": "Cygnus buccinator",
+  "iconic": "Aves",
+  "names": {
+   "en": "Trumpeter Swan",
+   "zhTW": null,
+   "zh": "黑嘴天鹅",
+   "ja": "ナキハクチョウ"
+  },
+  "iucn": "NT",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cygnus buccinator"
+ },
+ {
+  "id": 6930,
+  "scientificName": "Anas platyrhynchos",
+  "iconic": "Aves",
+  "names": {
+   "en": "Mallard",
+   "zhTW": "綠頭鴨",
+   "zh": "绿头鸭",
+   "ja": "マガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anas platyrhynchos"
+ },
+ {
+  "id": 6933,
+  "scientificName": "Anas acuta",
+  "iconic": "Aves",
+  "names": {
+   "en": "Northern Pintail",
+   "zhTW": "尖尾鴨",
+   "zh": "针尾鸭",
+   "ja": "オナガガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anas acuta"
+ },
+ {
+  "id": 7004,
+  "scientificName": "Mergus merganser",
+  "iconic": "Aves",
+  "names": {
+   "en": "Common Merganser",
+   "zhTW": "川秋沙",
+   "zh": "普通秋沙鸭",
+   "ja": "カワアイサ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Mergus merganser"
+ },
+ {
+  "id": 7024,
+  "scientificName": "Somateria mollissima",
+  "iconic": "Aves",
+  "names": {
+   "en": "Common Eider",
+   "zhTW": "歐絨鴨",
+   "zh": "欧绒鸭",
+   "ja": "ホンケワタガモ"
+  },
+  "iucn": "NT",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Somateria mollissima"
+ },
+ {
+  "id": 7072,
+  "scientificName": "Tadorna variegata",
+  "iconic": "Aves",
+  "names": {
+   "en": "Paradise Shelduck",
+   "zhTW": "天堂鴨",
+   "zh": "黑胸麻鸭",
+   "ja": "クロアカツクシガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tadorna variegata"
+ },
+ {
+  "id": 7111,
+  "scientificName": "Histrionicus histrionicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Harlequin Duck",
+   "zhTW": "丑鴨",
+   "zh": "丑鸭",
+   "ja": "シノリガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Histrionicus histrionicus"
+ },
+ {
+  "id": 7150,
+  "scientificName": "Cereopsis novaehollandiae",
+  "iconic": "Aves",
+  "names": {
+   "en": "Cape Barren Goose",
+   "zhTW": null,
+   "zh": "澳洲灰雁",
+   "ja": "ロウバシガン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cereopsis novaehollandiae"
+ },
+ {
+  "id": 7170,
+  "scientificName": "Clangula hyemalis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Long-tailed Duck",
+   "zhTW": "長尾鴨",
+   "zh": "长尾鸭",
+   "ja": "コオリガモ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Clangula hyemalis"
+ },
+ {
+  "id": 7372,
+  "scientificName": "Eremopterix leucopareia",
+  "iconic": "Aves",
+  "names": {
+   "en": "Fischer's Sparrow-Lark",
+   "zhTW": "白頰雀百靈",
+   "zh": "白颊雀百灵",
+   "ja": "スズメヒバリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eremopterix leucopareia"
+ },
+ {
+  "id": 7450,
+  "scientificName": "Certhia familiaris",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eurasian Treecreeper",
+   "zhTW": "旋木雀",
+   "zh": "旋木雀",
+   "ja": "キバシリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Certhia familiaris"
+ },
+ {
+  "id": 7642,
+  "scientificName": "Cinclus pallasii",
+  "iconic": "Aves",
+  "names": {
+   "en": "Brown Dipper",
+   "zhTW": "河烏",
+   "zh": "褐河乌",
+   "ja": "カワガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cinclus pallasii"
+ },
+ {
+  "id": 7647,
+  "scientificName": "Cinclus cinclus",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-throated Dipper",
+   "zhTW": "白喉河烏",
+   "zh": "河乌",
+   "ja": "ムナジロカワガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cinclus cinclus"
+ },
+ {
+  "id": 8010,
+  "scientificName": "Corvus corax",
+  "iconic": "Aves",
+  "names": {
+   "en": "Common Raven",
+   "zhTW": "渡鴉",
+   "zh": "渡鸦",
+   "ja": "ワタリガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Corvus corax"
+ },
+ {
+  "id": 8026,
+  "scientificName": "Corvus macrorhynchos",
+  "iconic": "Aves",
+  "names": {
+   "en": "Large-billed Crow",
+   "zhTW": "巨嘴鴉",
+   "zh": "大嘴乌鸦",
+   "ja": "ハシブトガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Corvus macrorhynchos"
+ },
+ {
+  "id": 9176,
+  "scientificName": "Zonotrichia leucophrys",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-crowned Sparrow",
+   "zhTW": "白冠帶鵐",
+   "zh": "白冠带鹀",
+   "ja": "ミヤマシトド"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Zonotrichia leucophrys"
+ },
+ {
+  "id": 9744,
+  "scientificName": "Agelaius phoeniceus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Red-winged Blackbird",
+   "zhTW": "紅翅黑鸝",
+   "zh": "红翅黑鹂",
+   "ja": "ハゴロモガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Agelaius phoeniceus"
+ },
+ {
+  "id": 10070,
+  "scientificName": "Fringilla coelebs",
+  "iconic": "Aves",
+  "names": {
+   "en": "Common Chaffinch",
+   "zhTW": "蒼頭燕雀",
+   "zh": "苍头燕雀",
+   "ja": "ズアオアトリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fringilla coelebs"
+ },
+ {
+  "id": 12065,
+  "scientificName": "Malurus cyaneus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Superb Fairywren",
+   "zhTW": "華麗細尾鵑鶯",
+   "zh": "华丽细尾鹩莺",
+   "ja": "ルリオーストラリアムシクイ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Malurus cyaneus"
+ },
+ {
+  "id": 12805,
+  "scientificName": "Niltava vivida",
+  "iconic": "Aves",
+  "names": {
+   "en": "Taiwan Vivid Niltava",
+   "zhTW": "黃腹琉璃",
+   "zh": "台湾棕腹蓝仙鹟",
+   "ja": "チャバラオオルリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": null
+ },
+ {
+  "id": 13858,
+  "scientificName": "Passer domesticus",
+  "iconic": "Aves",
+  "names": {
+   "en": "House Sparrow",
+   "zhTW": "家麻雀",
+   "zh": "家麻雀",
+   "ja": "イエスズメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Passer domesticus"
+ },
+ {
+  "id": 14619,
+  "scientificName": "Pycnonotus taivanus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Styan's Bulbul",
+   "zhTW": "烏頭翁",
+   "zh": "台湾鹎",
+   "ja": "クロガシラ"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pycnonotus taivanus"
+ },
+ {
+  "id": 14621,
+  "scientificName": "Pycnonotus sinensis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Light-vented Bulbul",
+   "zhTW": "白頭鵯",
+   "zh": "白头鹎",
+   "ja": "シロガシラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pycnonotus sinensis"
+ },
+ {
+  "id": 14939,
+  "scientificName": "Lamprotornis superbus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Superb Starling",
+   "zhTW": "栗頭麗椋鳥",
+   "zh": "栗头丽椋鸟",
+   "ja": "ツキノワテリムク"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Lamprotornis superbus"
+ },
+ {
+  "id": 15100,
+  "scientificName": "Heterophasia auricularis",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-eared Sibia",
+   "zhTW": "白耳畫眉",
+   "zh": "白耳奇鹛",
+   "ja": "ミミジロチメドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Heterophasia auricularis"
+ },
+ {
+  "id": 15323,
+  "scientificName": "Yuhina brunneiceps",
+  "iconic": "Aves",
+  "names": {
+   "en": "Taiwan Yuhina",
+   "zhTW": "冠羽畫眉",
+   "zh": "褐头凤鹛",
+   "ja": "カンムリチメドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Taiwan_yuhina"
+ },
+ {
+  "id": 17871,
+  "scientificName": "Dendrocopos major",
+  "iconic": "Aves",
+  "names": {
+   "en": "Great Spotted Woodpecker",
+   "zhTW": "大斑啄木鳥",
+   "zh": "大斑啄木鸟",
+   "ja": "アカゲラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Dendrocopos major"
+ },
+ {
+  "id": 19910,
+  "scientificName": "Strix uralensis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Ural Owl",
+   "zhTW": "長尾林鴞",
+   "zh": "长尾林鸮",
+   "ja": "フクロウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Strix uralensis"
+ },
+ {
+  "id": 20526,
+  "scientificName": "Struthio camelus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Common Ostrich",
+   "zhTW": "鴕鳥",
+   "zh": "非洲鸵鸟",
+   "ja": "ダチョウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Struthio camelus"
+ },
+ {
+  "id": 25591,
+  "scientificName": "Rana temporaria",
+  "iconic": "Amphibia",
+  "names": {
+   "en": "European Common Frog",
+   "zhTW": "林蛙",
+   "zh": "欧洲林蛙",
+   "ja": "ヨーロッパアカガエル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Rana temporaria"
+ },
+ {
+  "id": 26053,
+  "scientificName": "Fejervarya limnocharis",
+  "iconic": "Amphibia",
+  "names": {
+   "en": "Paddy Field Frog",
+   "zhTW": "澤蛙",
+   "zh": null,
+   "ja": "ジャワヌマガエル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Fejervarya limnocharis"
+ },
+ {
+  "id": 26068,
+  "scientificName": "Crocodylus porosus",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Saltwater Crocodile",
+   "zhTW": "咸水鱷",
+   "zh": "湾鳄",
+   "ja": "イリエワニ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Crocodylus porosus"
+ },
+ {
+  "id": 26159,
+  "scientificName": "Alligator mississippiensis",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "American Alligator",
+   "zhTW": "美國短吻鱷",
+   "zh": "美国短吻鳄",
+   "ja": "ミシシッピアリゲーター"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Alligator mississippiensis"
+ },
+ {
+  "id": 30953,
+  "scientificName": "Trimeresurus stejnegeri",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Chinese Green Tree Viper",
+   "zhTW": "赤尾青竹絲",
+   "zh": "福建竹叶青蛇",
+   "ja": "タイワンアオハブ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Trimeresurus stejnegeri"
+ },
+ {
+  "id": 31132,
+  "scientificName": "Agama mwanzae",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Mwanza Flat-headed Rock Agama",
+   "zhTW": null,
+   "zh": "姆万扎鬣蜥",
+   "ja": "ムワンザアガマ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Agama mwanzae"
+ },
+ {
+  "id": 36514,
+  "scientificName": "Anolis carolinensis",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Green Anole",
+   "zhTW": null,
+   "zh": "绿安乐蜥",
+   "ja": "グリーンアノール"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anolis carolinensis"
+ },
+ {
+  "id": 38021,
+  "scientificName": "Eutropis longicaudata",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Longtail Mabuya",
+   "zhTW": "長尾南蜥",
+   "zh": "长尾南蜥",
+   "ja": "オナガマブヤ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eutropis longicaudata"
+ },
+ {
+  "id": 39441,
+  "scientificName": "Varanus rosenbergi",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Heath Monitor",
+   "zhTW": "黑砂巨蜥",
+   "zh": "柔氏巨蜥",
+   "ja": null
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Varanus rosenbergi"
+ },
+ {
+  "id": 39566,
+  "scientificName": "Apalone ferox",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Florida Softshell Turtle",
+   "zhTW": "珍珠鱉",
+   "zh": "佛罗里达鳖",
+   "ja": "フロリダスッポン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Apalone ferox"
+ },
+ {
+  "id": 39824,
+  "scientificName": "Pseudemys nelsoni",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Florida Red-bellied Cooter",
+   "zhTW": "納氏偽龜",
+   "zh": "纳尔逊伪龟",
+   "ja": "フロリダアカハラガメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pseudemys nelsoni"
+ },
+ {
+  "id": 39950,
+  "scientificName": "Mauremys sinensis",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Chinese Stripe-necked Turtle",
+   "zhTW": "斑龜",
+   "zh": "花龟",
+   "ja": "ハナガメ"
+  },
+  "iucn": "CR",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Mauremys sinensis"
+ },
+ {
+  "id": 41752,
+  "scientificName": "Arctocephalus forsteri",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Long-nosed Fur Seal",
+   "zhTW": null,
+   "zh": "新西兰海狗",
+   "ja": "ニュージーランドオットセイ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Arctocephalus forsteri"
+ },
+ {
+  "id": 41759,
+  "scientificName": "Neophoca cinerea",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Australian Sea Lion",
+   "zhTW": null,
+   "zh": "澳洲海狮",
+   "ja": "オーストラリアアシカ"
+  },
+  "iucn": "EN",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Neophoca cinerea"
+ },
+ {
+  "id": 41886,
+  "scientificName": "Crocuta crocuta",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Spotted Hyena",
+   "zhTW": "斑鬣狗",
+   "zh": "斑鬣狗",
+   "ja": "ブチハイエナ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Crocuta crocuta"
+ },
+ {
+  "id": 42048,
+  "scientificName": "Canis lupus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Gray Wolf",
+   "zhTW": "灰狼",
+   "zh": "狼",
+   "ja": "オオカミ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Canis lupus"
+ },
+ {
+  "id": 42051,
+  "scientificName": "Canis latrans",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Coyote",
+   "zhTW": "郊狼",
+   "zh": "郊狼",
+   "ja": "コヨーテ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Canis latrans"
+ },
+ {
+  "id": 42113,
+  "scientificName": "Pecari tajacu",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Collared Peccary",
+   "zhTW": "領西貒",
+   "zh": "领西猯",
+   "ja": "クビワペッカリー"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pecari tajacu"
+ },
+ {
+  "id": 42149,
+  "scientificName": "Hippopotamus amphibius",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Common Hippopotamus",
+   "zhTW": "河馬",
+   "zh": "河马",
+   "ja": "カバ"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Hippopotamus amphibius"
+ },
+ {
+  "id": 42220,
+  "scientificName": "Odocoileus hemionus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Mule Deer",
+   "zhTW": "黑尾鹿",
+   "zh": "黑尾鹿",
+   "ja": "ミュールジカ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Odocoileus hemionus"
+ },
+ {
+  "id": 42429,
+  "scientificName": "Antilocapra americana",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Pronghorn",
+   "zhTW": "叉角羚",
+   "zh": "叉角羚",
+   "ja": "プロングホーン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Antilocapra americana"
+ },
+ {
+  "id": 42983,
+  "scientificName": "Phascolarctos cinereus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Koala",
+   "zhTW": "樹袋熊",
+   "zh": "树袋熊",
+   "ja": "コアラ"
+  },
+  "iucn": "VU",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phascolarctos cinereus"
+ },
+ {
+  "id": 43088,
+  "scientificName": "Heterohyrax brucei",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Bush Hyrax",
+   "zhTW": null,
+   "zh": "黄斑岩蹄兔",
+   "ja": "キボシイワハイラックス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Heterohyrax brucei"
+ },
+ {
+  "id": 43450,
+  "scientificName": "Macaca cyclopis",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Formosan Rock Macaque",
+   "zhTW": "臺灣獼猴",
+   "zh": "台湾猕猴",
+   "ja": "タイワンザル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Macaca cyclopis"
+ },
+ {
+  "id": 43694,
+  "scientificName": "Loxodonta africana",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "African Savanna Elephant",
+   "zhTW": "非洲草原象",
+   "zh": "非洲草原象",
+   "ja": "アフリカゾウ"
+  },
+  "iucn": "EN",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Loxodonta africana"
+ },
+ {
+  "id": 46001,
+  "scientificName": "Sciurus vulgaris",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Eurasian Red Squirrel",
+   "zhTW": "歐亞紅松鼠",
+   "zh": "欧亚红松鼠",
+   "ja": "キタリス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Sciurus vulgaris"
+ },
+ {
+  "id": 46168,
+  "scientificName": "Tamiops maritimus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Maritime Striped Squirrel",
+   "zhTW": "條紋松鼠",
+   "zh": "倭花鼠",
+   "ja": "タイワンホオジロシマリス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Tamiops maritimus"
+ },
+ {
+  "id": 62345,
+  "scientificName": "Duttaphrynus melanostictus",
+  "iconic": "Amphibia",
+  "names": {
+   "en": "Asian Common Toad",
+   "zhTW": "黑眶蟾蜍",
+   "zh": "黑眶蟾蜍",
+   "ja": "ヘリグロヒキガエル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Duttaphrynus melanostictus"
+ },
+ {
+  "id": 67683,
+  "scientificName": "Papio cynocephalus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Yellow Baboon",
+   "zhTW": "草原狒狒",
+   "zh": "草原狒狒",
+   "ja": "キイロヒヒ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Papio cynocephalus"
+ },
+ {
+  "id": 72486,
+  "scientificName": "Alopochen aegyptiaca",
+  "iconic": "Aves",
+  "names": {
+   "en": "Egyptian Goose",
+   "zhTW": "埃及雁",
+   "zh": "埃及雁",
+   "ja": "エジプトガン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Alopochen aegyptiaca"
+ },
+ {
+  "id": 72504,
+  "scientificName": "Anas zonorhyncha",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eastern Spot-billed Duck",
+   "zhTW": "花嘴鴨",
+   "zh": "斑嘴鸭",
+   "ja": "カルガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anas zonorhyncha"
+ },
+ {
+  "id": 72785,
+  "scientificName": "Cyanopica cyanus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Azure-winged Magpie",
+   "zhTW": "灰喜鵲",
+   "zh": "灰喜鹊",
+   "ja": "オナガ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyanopica cyanus"
+ },
+ {
+  "id": 72965,
+  "scientificName": "Ketupa blakistoni",
+  "iconic": "Aves",
+  "names": {
+   "en": "Blakiston's Fish-Owl",
+   "zhTW": null,
+   "zh": "毛腿渔鸮",
+   "ja": "シマフクロウ"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ketupa blakistoni"
+ },
+ {
+  "id": 72967,
+  "scientificName": "Lamprotornis purpuroptera",
+  "iconic": "Aves",
+  "names": {
+   "en": "Rüppell's Starling",
+   "zhTW": "盧氏麗椋鳥",
+   "zh": "卢氏丽椋鸟",
+   "ja": "コオナガテリムク"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Rüppell's_starling"
+ },
+ {
+  "id": 73078,
+  "scientificName": "Myophonus insularis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Taiwan Whistling-Thrush",
+   "zhTW": "台灣紫嘯鶇",
+   "zh": "台湾紫啸鸫",
+   "ja": "ルリチョウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Taiwan_whistling_thrush"
+ },
+ {
+  "id": 73222,
+  "scientificName": "Phoenicopterus roseus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Greater Flamingo",
+   "zhTW": "大紅鸛",
+   "zh": "大红鹳",
+   "ja": "ヨーロッパフラミンゴ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Phoenicopterus roseus"
+ },
+ {
+  "id": 74144,
+  "scientificName": "Capricornis swinhoei",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Taiwan Serow",
+   "zhTW": "臺灣野山羊",
+   "zh": "台湾鬣羚",
+   "ja": "タイワンカモシカ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Capricornis swinhoei"
+ },
+ {
+  "id": 74321,
+  "scientificName": "Eudorcas thomsonii",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Thomson's Gazelle",
+   "zhTW": "湯氏瞪羚",
+   "zh": "汤氏瞪羚",
+   "ja": "トムソンガゼル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eudorcas thomsonii"
+ },
+ {
+  "id": 74832,
+  "scientificName": "Papio anubis",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Olive Baboon",
+   "zhTW": "東非狒狒",
+   "zh": "东非狒狒",
+   "ja": "アヌビスヒヒ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Papio anubis"
+ },
+ {
+  "id": 74890,
+  "scientificName": "Physeter macrocephalus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Sperm Whale",
+   "zhTW": "抹香鯨",
+   "zh": "抹香鲸",
+   "ja": "マッコウクジラ"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Physeter macrocephalus"
+ },
+ {
+  "id": 116461,
+  "scientificName": "Anolis sagrei",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Brown Anole",
+   "zhTW": "沙氏變色蜥",
+   "zh": "萨氏安乐蜥",
+   "ja": "ブラウンアノール"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anolis sagrei"
+ },
+ {
+  "id": 116838,
+  "scientificName": "Cacatua sanguinea",
+  "iconic": "Aves",
+  "names": {
+   "en": "Little Corella",
+   "zhTW": "小鳳頭鸚鵡",
+   "zh": "小凤头鹦鹉",
+   "ja": "アカビタイムジオウム"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cacatua sanguinea"
+ },
+ {
+  "id": 143853,
+  "scientificName": "Pica hudsonia",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-billed Magpie",
+   "zhTW": null,
+   "zh": "北美喜鹊",
+   "ja": "アメリカカササギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pica hudsonia"
+ },
+ {
+  "id": 144455,
+  "scientificName": "Ardea alba",
+  "iconic": "Aves",
+  "names": {
+   "en": "Great Egret",
+   "zhTW": "大白鷺",
+   "zh": "大白鹭",
+   "ja": "ダイサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardea alba"
+ },
+ {
+  "id": 144507,
+  "scientificName": "Chroicocephalus novaehollandiae",
+  "iconic": "Aves",
+  "names": {
+   "en": "Silver Gull",
+   "zhTW": "澳洲紅嘴鷗",
+   "zh": "澳洲红嘴鸥",
+   "ja": "ギンカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Chroicocephalus novaehollandiae"
+ },
+ {
+  "id": 144510,
+  "scientificName": "Chroicocephalus ridibundus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-headed Gull",
+   "zhTW": "紅嘴鷗",
+   "zh": "红嘴鸥",
+   "ja": "ユリカモメ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Chroicocephalus ridibundus"
+ },
+ {
+  "id": 144809,
+  "scientificName": "Poecile palustris",
+  "iconic": "Aves",
+  "names": {
+   "en": "Marsh Tit",
+   "zhTW": "沼澤山雀",
+   "zh": "沼泽山雀",
+   "ja": "ハシブトガラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Poecile palustris"
+ },
+ {
+  "id": 144823,
+  "scientificName": "Periparus ater",
+  "iconic": "Aves",
+  "names": {
+   "en": "Coal Tit",
+   "zhTW": "煤山雀",
+   "zh": "煤山雀",
+   "ja": "ヒガラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Periparus ater"
+ },
+ {
+  "id": 144849,
+  "scientificName": "Cyanistes caeruleus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eurasian Blue Tit",
+   "zhTW": "藍山雀",
+   "zh": "蓝山雀",
+   "ja": "アオガラ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyanistes caeruleus"
+ },
+ {
+  "id": 145068,
+  "scientificName": "Phoenicurus fuliginosus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Plumbeous Water Redstart",
+   "zhTW": "鉛色水鶇",
+   "zh": "红尾水鸲",
+   "ja": "カワビタキ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Plumbeous_water_redstart"
+ },
+ {
+  "id": 201031,
+  "scientificName": "Leptoptilos crumenifer",
+  "iconic": "Aves",
+  "names": {
+   "en": "Marabou Stork",
+   "zhTW": "非洲秃鸛",
+   "zh": "非洲秃鹳",
+   "ja": "アフリカハゲコウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Leptoptilos crumenifer"
+ },
+ {
+  "id": 201192,
+  "scientificName": "Saxicola rubicola",
+  "iconic": "Aves",
+  "names": {
+   "en": "European Stonechat",
+   "zhTW": "歐洲石鵖",
+   "zh": "欧洲石䳭",
+   "ja": "ニシノビタキ"
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Saxicola rubicola"
+ },
+ {
+  "id": 204113,
+  "scientificName": "Cervus elaphus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Red Deer",
+   "zhTW": "歐洲馬鹿",
+   "zh": "马鹿",
+   "ja": "アカシカ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cervus elaphus"
+ },
+ {
+  "id": 204114,
+  "scientificName": "Cervus canadensis",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Wapiti",
+   "zhTW": "加拿大馬鹿",
+   "zh": "加拿大马鹿",
+   "ja": "ワピチ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cervus canadensis"
+ },
+ {
+  "id": 204496,
+  "scientificName": "Corvus corone",
+  "iconic": "Aves",
+  "names": {
+   "en": "Carrion Crow",
+   "zhTW": "小嘴烏鴉",
+   "zh": "小嘴乌鸦",
+   "ja": "ハシボソガラス"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Corvus corone"
+ },
+ {
+  "id": 204533,
+  "scientificName": "Larus argentatus",
+  "iconic": "Aves",
+  "names": {
+   "en": "European Herring Gull",
+   "zhTW": null,
+   "zh": "银鸥",
+   "ja": null
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Herring gull"
+ },
+ {
+  "id": 208700,
+  "scientificName": "Bos bison",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "American Bison",
+   "zhTW": "美洲野牛",
+   "zh": "美洲野牛",
+   "ja": "アメリカバイソン"
+  },
+  "iucn": "NT",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bos bison"
+ },
+ {
+  "id": 326296,
+  "scientificName": "Bufo bufo",
+  "iconic": "Amphibia",
+  "names": {
+   "en": "European Toad",
+   "zhTW": "大蟾蜍",
+   "zh": "欧洲蟾蜍",
+   "ja": "ヨーロッパヒキガエル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Bufo bufo"
+ },
+ {
+  "id": 339684,
+  "scientificName": "Cyanopica cooki",
+  "iconic": "Aves",
+  "names": {
+   "en": "Iberian Magpie",
+   "zhTW": "藍尾灰喜鵲",
+   "zh": "蓝尾灰喜鹊",
+   "ja": "イベリアオナガ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Cyanopica cooki"
+ },
+ {
+  "id": 339691,
+  "scientificName": "Parus cinereus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Asian Tit",
+   "zhTW": "蒼背山雀",
+   "zh": "大山雀",
+   "ja": "シジュウカラ"
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Parus cinereus"
+ },
+ {
+  "id": 339867,
+  "scientificName": "Trochalopteron morrisonianum",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-whiskered Laughingthrush",
+   "zhTW": "台灣噪眉",
+   "zh": "玉山噪鹛",
+   "ja": "タイワンキンバネガビチョウ"
+  },
+  "iucn": "NT",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Trochalopteron morrisonianum"
+ },
+ {
+  "id": 341972,
+  "scientificName": "Crocodylus niloticus",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Nile Crocodile",
+   "zhTW": "尼羅河鱷",
+   "zh": "尼罗鳄",
+   "ja": "ナイルワニ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Crocodylus niloticus"
+ },
+ {
+  "id": 367544,
+  "scientificName": "Psilopogon nuchalis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Taiwan Barbet",
+   "zhTW": "五色鳥",
+   "zh": "台湾拟啄木鸟",
+   "ja": "タイワンゴシキドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Psilopogon nuchalis"
+ },
+ {
+  "id": 367698,
+  "scientificName": "Carpodacus formosanus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Taiwan Rosefinch",
+   "zhTW": "台灣朱雀",
+   "zh": "台湾酒红朱雀",
+   "ja": "タイワンマシコ"
+  },
+  "iucn": "NT",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Taiwan rosefinch"
+ },
+ {
+  "id": 438022,
+  "scientificName": "Petroica boodang",
+  "iconic": "Aves",
+  "names": {
+   "en": "Scarlet Robin",
+   "zhTW": null,
+   "zh": "绯红鸲鹟",
+   "ja": "サンショクヒタキ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Petroica boodang"
+ },
+ {
+  "id": 486630,
+  "scientificName": "Buteo japonicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eastern Buzzard",
+   "zhTW": "普通鵟",
+   "zh": "普通鵟",
+   "ja": "ノスリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Buteo japonicus"
+ },
+ {
+  "id": 508048,
+  "scientificName": "Antigone canadensis",
+  "iconic": "Aves",
+  "names": {
+   "en": "Sandhill Crane",
+   "zhTW": "沙丘鶴",
+   "zh": "沙丘鹤",
+   "ja": "カナダヅル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Sandhill_crane"
+ },
+ {
+  "id": 508057,
+  "scientificName": "Antigone vipio",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-naped Crane",
+   "zhTW": "白枕鶴",
+   "zh": "白枕鹤",
+   "ja": "マナヅル"
+  },
+  "iucn": "VU",
+  "obscured": true,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Antigone vipio"
+ },
+ {
+  "id": 547179,
+  "scientificName": "Spodiopsar cineraceus",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-cheeked Starling",
+   "zhTW": "灰椋鳥",
+   "zh": "灰椋鸟",
+   "ja": "ムクドリ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Spodiopsar cineraceus"
+ },
+ {
+  "id": 558426,
+  "scientificName": "Anser caerulescens",
+  "iconic": "Aves",
+  "names": {
+   "en": "Snow Goose",
+   "zhTW": "雪雁",
+   "zh": "雪雁",
+   "ja": "ハクガン"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Anser caerulescens"
+ },
+ {
+  "id": 558438,
+  "scientificName": "Spatula clypeata",
+  "iconic": "Aves",
+  "names": {
+   "en": "Northern Shoveler",
+   "zhTW": "琵嘴鴨",
+   "zh": "琵嘴鸭",
+   "ja": "ハシビロガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Northern_shoveler"
+ },
+ {
+  "id": 558441,
+  "scientificName": "Mareca penelope",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eurasian Wigeon",
+   "zhTW": "赤頸鴨",
+   "zh": "赤颈鸭",
+   "ja": "ヒドリガモ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Mareca penelope"
+ },
+ {
+  "id": 558445,
+  "scientificName": "Ardea intermedia",
+  "iconic": "Aves",
+  "names": {
+   "en": "Medium Egret",
+   "zhTW": "中白鷺",
+   "zh": "中白鹭",
+   "ja": "チュウサギ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Ardea intermedia"
+ },
+ {
+  "id": 558513,
+  "scientificName": "Eurocephalus ruppelli",
+  "iconic": "Aves",
+  "names": {
+   "en": "Northern White-crowned Shrike",
+   "zhTW": "白腰林鵙",
+   "zh": "白腰林鵙",
+   "ja": "キタシロズキンヤブモズ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eurocephalus ruppelli"
+ },
+ {
+  "id": 710315,
+  "scientificName": "Buergeria otai",
+  "iconic": "Amphibia",
+  "names": {
+   "en": "Ota's stream tree frog",
+   "zhTW": "太田樹蛙",
+   "zh": "太田溪树蛙",
+   "ja": "オオタカジカガエル"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Buergeria otai"
+ },
+ {
+  "id": 797597,
+  "scientificName": "Agama picticauda",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Peters's Rock Agama",
+   "zhTW": null,
+   "zh": "纹尾鬣蜥",
+   "ja": null
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Agama picticauda"
+ },
+ {
+  "id": 797638,
+  "scientificName": "Diploderma swinhonis",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Taiwan Japalure",
+   "zhTW": "斯文豪氏攀蜥",
+   "zh": "台湾攀蜥",
+   "ja": "スウィンホーキノボリトカゲ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Diploderma_swinhonis"
+ },
+ {
+  "id": 827401,
+  "scientificName": "Pica serica",
+  "iconic": "Aves",
+  "names": {
+   "en": "Oriental Magpie",
+   "zhTW": "喜鵲",
+   "zh": "喜鹊",
+   "ja": "カササギ"
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": "http://en.wikipedia.org/wiki/Oriental_magpie"
+ },
+ {
+  "id": 904173,
+  "scientificName": "Agkistrodon conanti",
+  "iconic": "Reptilia",
+  "names": {
+   "en": "Florida Cottonmouth",
+   "zhTW": null,
+   "zh": "佛州食鱼蝮",
+   "ja": null
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Florida_cottonmouth"
+ },
+ {
+  "id": 980257,
+  "scientificName": "Zosterops simplex",
+  "iconic": "Aves",
+  "names": {
+   "en": "Swinhoe's White-eye",
+   "zhTW": "斯氏繡眼",
+   "zh": "暗绿绣眼鸟",
+   "ja": "ミナミメジロ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Zosterops simplex"
+ },
+ {
+  "id": 1289604,
+  "scientificName": "Gulosus aristotelis",
+  "iconic": "Aves",
+  "names": {
+   "en": "European Shag",
+   "zhTW": "長冠鸕鶿",
+   "zh": "欧鸬鹚",
+   "ja": "ヨーロッパヒメウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Gulosus aristotelis"
+ },
+ {
+  "id": 1289605,
+  "scientificName": "Urile pelagicus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Pelagic Cormorant",
+   "zhTW": "海鸕鷀",
+   "zh": "海鸬鹚",
+   "ja": "ヒメウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Pelagic_cormorant"
+ },
+ {
+  "id": 1430935,
+  "scientificName": "Madoqua cavendishi",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Cavendish's Dik-Dik",
+   "zhTW": null,
+   "zh": "卡文迪什犬羚",
+   "ja": null
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": null
+ },
+ {
+  "id": 1453434,
+  "scientificName": "Notamacropus eugenii",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Tammar Wallaby",
+   "zhTW": null,
+   "zh": "尤金袋鼠",
+   "ja": "ダマヤブワラビー"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Notamacropus eugenii"
+ },
+ {
+  "id": 1454382,
+  "scientificName": "Nannopterum auritum",
+  "iconic": "Aves",
+  "names": {
+   "en": "Double-crested Cormorant",
+   "zhTW": "雙冠鸕鶿",
+   "zh": "双冠鸬鹚",
+   "ja": "ミミヒメウ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Double-crested_cormorant"
+ },
+ {
+  "id": 1505653,
+  "scientificName": "Icthyophaga leucogaster",
+  "iconic": "Aves",
+  "names": {
+   "en": "White-bellied Sea-Eagle",
+   "zhTW": "白腹海鵰",
+   "zh": "白腹海雕",
+   "ja": "シロハラウミワシ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Icthyophaga leucogaster"
+ },
+ {
+  "id": 1585373,
+  "scientificName": "Ardea coromanda",
+  "iconic": "Aves",
+  "names": {
+   "en": "Eastern Cattle-Egret",
+   "zhTW": "黃頭鷺",
+   "zh": "牛背鹭",
+   "ja": "アマサギ"
+  },
+  "iucn": null,
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Eastern_cattle_egret"
+ },
+ {
+  "id": 1664972,
+  "scientificName": "Aethalodelphis obscurus",
+  "iconic": "Mammalia",
+  "names": {
+   "en": "Dusky Dolphin",
+   "zhTW": "暗色斑紋海豚",
+   "zh": "暗色斑纹海豚",
+   "ja": "ハラジロカマイルカ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Dusky_dolphin"
+ },
+ {
+  "id": 1720555,
+  "scientificName": "Schoeniclus spodocephalus",
+  "iconic": "Aves",
+  "names": {
+   "en": "Black-faced Bunting",
+   "zhTW": "灰頭黑臉鵐",
+   "zh": "灰头鹀",
+   "ja": "シベリアアオジ"
+  },
+  "iucn": "LC",
+  "obscured": false,
+  "wikipediaUrl": "https://en.wikipedia.org/wiki/Schoeniclus spodocephalus"
+ }
+]

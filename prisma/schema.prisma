@@ -1,6 +1,15 @@
+// WildLens v2 data model
+//
+// Design notes
+// - Profile is folded into User (it was a strict 1:1 with no independent lifecycle).
+// - Likes, comments and poll ballots are real rows keyed by user, so counts can't be
+//   inflated and "liked by me" can be answered. Counts come from `_count`.
+// - Comment / Like / Image use one nullable FK per target type (exactly one is set);
+//   this keeps referential integrity + cascade deletes without a polymorphic string.
+// - Photo locations are stored as plain latitude/longitude columns instead of GeoJSON.
+
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["omitApi"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
@@ -8,204 +17,1021 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
-  id               Int                @id @default(autoincrement())
-  email            String             @unique
-  username         String
-  password         String
-  profile          Profile?
-  photoPosts       PhotoPost[]
-  communityPosts   CommunityPost[]
-  photoComments    PhotoComment[]
-  CommunityComment CommunityComment[]
-  ArticleComment   ArticleComment[]
-  Votes            Vote[]
-  userVotes        UserVote[]
+enum Role {
+  USER
+  ADMIN
+}
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+enum ArticleStatus {
+  DRAFT
+  PUBLISHED
+}
+
+enum SpeciesGroup {
+  BIRD
+  MAMMAL
+  REPTILE
+  AMPHIBIAN
+  FISH
+  INSECT
+  OTHER
+}
+
+/// IUCN Red List category (subset).
+enum ConservationStatus {
+  LC
+  NT
+  VU
+  EN
+  CR
+}
+
+/// How precisely a photo's coordinates are shown to people other than the author.
+enum LocationPrecision {
+  EXACT
+  APPROX
+  HIDDEN
+}
+
+enum NotificationType {
+  LIKE
+  COMMENT
+  FOLLOW
+  IDENTIFICATION
+  ANSWER_ACCEPTED
+  /// Someone critiqued your photo.
+  CRITIQUE
+  /// Someone joined your field trip.
+  TRIP_JOINED
+  /// You moved from the waitlist to the confirmed list.
+  TRIP_CONFIRMED
+}
+
+enum GearType {
+  CAMERA
+  LENS
+  TELECONVERTER
+}
+
+/// Photo licence chosen by the photographer.
+enum PhotoLicense {
+  ALL_RIGHTS_RESERVED
+  CC0
+  CC_BY
+  CC_BY_NC
+}
+
+enum PlaceKind {
+  PROTECTED_AREA
+  WETLAND
+  FOREST
+  COAST
+  MOUNTAIN
+  URBAN_PARK
+  OTHER
+}
+
+/// DRAFT outings are private to their author (the batch upload's server-side state).
+enum OutingStatus {
+  DRAFT
+  PUBLISHED
+}
+
+/// CURATED places are public; PROPOSED ones are visible to their proposer and admins until reviewed.
+enum PlaceStatus {
+  CURATED
+  PROPOSED
+}
+
+enum TripDifficulty {
+  EASY
+  MODERATE
+  HARD
+}
+
+enum TripMemberStatus {
+  GOING
+  WAITLIST
+}
+
+enum PostType {
+  DISCUSSION
+  QUESTION
+}
+
+/// Data quality of an observation (see src/modules/photos/quality.ts for the rules).
+enum PhotoQuality {
+  CASUAL
+  NEEDS_ID
+  CONFIRMED
+}
+
+enum EmailTokenType {
+  VERIFY_EMAIL
+  RESET_PASSWORD
+}
+
+enum ReportTargetType {
+  photo
+  community
+  comment
+  user
+  poll
+}
+
+enum ReportReason {
+  SPAM
+  HARASSMENT
+  INAPPROPRIATE
+  WILDLIFE_HARM
+  SENSITIVE_LOCATION
+  COPYRIGHT
+  OTHER
+}
+
+enum ReportStatus {
+  OPEN
+  RESOLVED
+  DISMISSED
+}
+
+model User {
+  id            Int      @id @default(autoincrement())
+  email         String   @unique
+  username      String
+  /// Null for accounts created through Google sign-in that never set a password.
+  passwordHash  String?  @map("password_hash")
+  /// Google account subject ("sub" claim) once linked.
+  googleId      String?  @unique @map("google_id")
+  role          Role     @default(USER)
+  avatarIndex   Int      @default(1) @map("avatar_index")
+  bio           String?
+  interests     String[] @default([])
+  emailVerified Boolean  @default(false) @map("email_verified")
+  /// UI / email language: "zh-TW" | "en"
+  locale        String   @default("zh-TW")
+  /// Uploaded profile photo (null → the drawn avatar).
+  avatarUrl     String?  @map("avatar_url")
+  /// Area the member is based in (places/areas.ts keys).
+  homeArea      String?  @map("home_area")
+  /// Species groups the member specialises in (SpeciesGroup values).
+  specialties   String[] @default([])
+  /// System account (e.g. the iNaturalist import): cannot sign in, shown with an explanation.
+  system        Boolean  @default(false) @map("is_system")
+
+  articles       Article[]
+  photoPosts     PhotoPost[]
+  communityPosts CommunityPost[]
+  comments       Comment[]
+  likes          Like[]
+  polls          Poll[]
+  ballots        PollBallot[]
+  images         Image[]
+
+  notifications     Notification[]   @relation("NotificationRecipient")
+  sentNotifications Notification[]   @relation("NotificationActor")
+  refreshTokens     RefreshToken[]
+  emailTokens       EmailToken[]
+  following         Follow[]         @relation("Follower")
+  followers         Follow[]         @relation("Following")
+  blocking          Block[]          @relation("Blocker")
+  blockedBy         Block[]          @relation("Blocked")
+  bookmarks         Bookmark[]
+  identifications   Identification[]
+  reports           Report[]         @relation("Reporter")
+  challengeEntries  ChallengeEntry[]
+  challengeVotes    ChallengeVote[]
+  organizedTrips    Trip[]           @relation("TripOrganizer")
+  tripMemberships   TripMember[]
+  critiques         Critique[]
+  gearReviews       GearReview[]
+  ownedGear         UserGear[]
+  proposedPlaces    Place[]          @relation("PlaceCreator")
+  outings           Outing[]
+  resolvedReports   Report[]         @relation("ReportResolver")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
 
   @@map("users")
 }
 
-model Profile {
-  id                  Int      @id @default(autoincrement())
-  userId              Int      @unique
-  selectedAvatarIndex Int
-  selectedTags        String[]
-  intro               String?
-  interestedTopics    String[]
-  user                User     @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("profiles")
-}
-
-model PhotoPost {
-  id          Int            @id @default(autoincrement())
-  title       String
-  likes       Int
-  views       Int
-  description String
-  location    String
-  geometry    Json // 地理位置座標
-  comments    PhotoComment[]
-  images      Image[]
-  authorId    Int
-  author      User           @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  isEdit      Boolean
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("photo_posts")
-}
-
-model PhotoComment {
-  id       Int       @id @default(autoincrement())
-  postId   Int
-  authorId Int
-  content  String
-  likes    Int       @default(0)
-  post     PhotoPost @relation(fields: [postId], references: [id], onDelete: Cascade)
-  author   User      @relation(fields: [authorId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("photo_comments")
-}
-
-model CommunityPost {
-  id        Int                @id @default(autoincrement())
-  title     String
-  authorId  Int
-  author    User               @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  content   Json
-  comments  CommunityComment[]
-  topicTags String[]
-  likes     Int                @default(0)
-  views     Int                @default(0)
-  isEdit    Boolean
-  images    Image[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("community_posts")
-}
-
-model CommunityComment {
-  id       Int           @id @default(autoincrement())
-  postId   Int
-  authorId Int
-  content  String
-  likes    Int           @default(0)
-  post     CommunityPost @relation(fields: [postId], references: [id], onDelete: Cascade)
-  author   User          @relation(fields: [authorId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("community_comments")
-}
-
-model Vote {
-  id               Int          @id @default(autoincrement())
-  title            String
-  description      String?
-  startDate        DateTime
-  endDate          DateTime
-  participantCount Int          @default(0)
-  isEnd            Boolean      @default(false)
-  options          VoteOption[]
-  userVotes        UserVote[]
-  authorId         Int
-  author           User         @relation(fields: [authorId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("votes")
-}
-
-model VoteOption {
-  id        Int        @id @default(autoincrement())
-  text      String
-  voteId    Int
-  vote      Vote       @relation(fields: [voteId], references: [id], onDelete: Cascade)
-  userVotes UserVote[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("vote_options")
-}
-
-model UserVote {
-  id Int @id @default(autoincrement())
-
-  userId       Int
-  user         User       @relation(fields: [userId], references: [id], onDelete: Cascade)
-  voteId       Int
-  Vote         Vote       @relation(fields: [voteId], references: [id], onDelete: Cascade)
-  voteOptionId Int
-  voteOption   VoteOption @relation(fields: [voteOptionId], references: [id], onDelete: Cascade)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  @@map("user_votes")
-}
-
 model Article {
-  id         Int              @id @default(autoincrement())
-  title      String
-  subTitle   String
-  views      Int              @default(0)
-  likes      Int              @default(0)
-  content    Json
-  topicTags  String[]
-  comments   ArticleComment[]
-  coverImage String
-  images     Image[]
+  id               Int           @id @default(autoincrement())
+  title            String
+  subtitle         String        @default("")
+  coverImageUrl    String        @map("cover_image_url")
+  content          Json // Quill Delta
+  tags             String[]      @default([])
+  status           ArticleStatus @default(PUBLISHED)
+  /// Language of the article: "zh-TW" | "en"
+  locale           String        @default("zh-TW")
+  /// Articles sharing a group are translations of one another (one per locale).
+  translationGroup String?       @map("translation_group")
+  viewCount        Int           @default(0) @map("view_count")
+  authorId         Int?          @map("author_id")
+  author           User?         @relation(fields: [authorId], references: [id], onDelete: SetNull)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  comments      Comment[]
+  likes         Like[]
+  images        Image[]
+  notifications Notification[]
+  bookmarks     Bookmark[]
 
+  publishedAt DateTime? @map("published_at")
+  createdAt   DateTime  @default(now()) @map("created_at")
+  updatedAt   DateTime  @updatedAt @map("updated_at")
+
+  @@index([status, publishedAt])
+  @@index([locale])
+  @@index([translationGroup])
   @@map("articles")
 }
 
-model ArticleComment {
-  id        Int     @id @default(autoincrement())
-  articleId Int
-  content   String
-  likes     Int     @default(0)
-  article   Article @relation(fields: [articleId], references: [id], onDelete: Cascade)
-  User      User    @relation(fields: [authorId], references: [id], onDelete: Cascade)
-  authorId  Int
+model PhotoPost {
+  id           Int     @id @default(autoincrement())
+  title        String
+  description  String
+  locationName String  @map("location_name")
+  /// Detected language of title + description ("zh-TW" | "en").
+  language     String  @default("zh-TW")
+  latitude     Float
+  longitude    Float
+  viewCount    Int     @default(0) @map("view_count")
+  edited       Boolean @default(false)
+  authorId     Int     @map("author_id")
+  author       User    @relation(fields: [authorId], references: [id], onDelete: Cascade)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  speciesId         Int?              @map("species_id")
+  species           Species?          @relation(fields: [speciesId], references: [id], onDelete: SetNull)
+  takenAt           DateTime?         @map("taken_at")
+  exif              Json? // { camera, lens, focalLength, aperture, shutterSpeed, iso }
+  locationPrecision LocationPrecision @default(EXACT) @map("location_precision")
+  /// Derived from takenAt / precision / identifications; refreshed on every relevant write.
+  quality           PhotoQuality      @default(CASUAL)
+  /// The author asks the community for structured feedback on this photo.
+  critiqueRequested Boolean           @default(false) @map("critique_requested")
+  /// Shot during this field trip (shown in the trip album).
+  placeId           Int?              @map("place_id")
+  place             Place?            @relation(fields: [placeId], references: [id], onDelete: SetNull)
+  /// Regional cluster for seasonal statistics, derived from the time zone at the coordinates (places/areas.ts).
+  area              String            @default("other")
+  /// The outing (field journal) this observation was recorded on.
+  outingId          Int?              @map("outing_id")
+  outing            Outing?           @relation(fields: [outingId], references: [id], onDelete: SetNull)
+  tripId            Int?              @map("trip_id")
+  trip              Trip?             @relation(fields: [tripId], references: [id], onDelete: SetNull)
+  /// Gear resolved from EXIF (see src/modules/gear/normalize.ts); null when not in the catalogue.
+  cameraId          Int?              @map("camera_id")
+  camera            Gear?             @relation("PhotoCamera", fields: [cameraId], references: [id], onDelete: SetNull)
+  lensId            Int?              @map("lens_id")
+  lens              Gear?             @relation("PhotoLens", fields: [lensId], references: [id], onDelete: SetNull)
+  license           PhotoLicense      @default(ALL_RIGHTS_RESERVED)
+  /// Captive / managed animal (zoo, rehab, farm). Excluded from distribution, scouting and research-grade data.
+  captive           Boolean           @default(false)
 
-  @@map("article_comments")
+  /// Imported records: where the observation comes from and who made it. Null for WildLens uploads.
+  sourceName    String? @map("source_name")
+  sourceId      String? @map("source_id")
+  sourceUrl     String? @map("source_url")
+  sourceAuthor  String? @map("source_author")
+  /// Licence code as published by the source (e.g. "cc-by"); `license` holds the normalised value.
+  sourceLicense String? @map("source_license")
+
+  images           Image[]
+  comments         Comment[]
+  likes            Like[]
+  notifications    Notification[]
+  bookmarks        Bookmark[]
+  identifications  Identification[]
+  critiques        Critique[]
+  challengeEntries ChallengeEntry[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([sourceName, sourceId])
+  @@index([authorId])
+  @@index([createdAt])
+  @@index([critiqueRequested])
+  @@index([tripId])
+  @@index([cameraId])
+  @@index([lensId])
+  @@index([placeId])
+  @@index([area])
+  @@index([outingId])
+  @@index([speciesId])
+  @@index([takenAt])
+  @@index([quality])
+  @@index([language])
+  @@map("photo_posts")
+}
+
+model CommunityPost {
+  id        Int      @id @default(autoincrement())
+  title     String
+  content   Json // Quill Delta
+  excerpt   String   @default("")
+  /// Detected language of title + body ("zh-TW" | "en").
+  language  String   @default("zh-TW")
+  tags      String[] @default([])
+  viewCount Int      @default(0) @map("view_count")
+  edited    Boolean  @default(false)
+  authorId  Int      @map("author_id")
+  author    User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  categoryKey       String        @map("category_key")
+  category          ForumCategory @relation(fields: [categoryKey], references: [key], onUpdate: Cascade)
+  type              PostType      @default(DISCUSSION)
+  pinned            Boolean       @default(false)
+  locked            Boolean       @default(false)
+  /// The accepted answer of a QUESTION (a comment on this post).
+  acceptedCommentId Int?          @unique @map("accepted_comment_id")
+  acceptedComment   Comment?      @relation("AcceptedAnswer", fields: [acceptedCommentId], references: [id], onDelete: SetNull)
+  /// createdAt, bumped by every new comment; drives the default "activity" sort.
+  lastActivityAt    DateTime      @default(now()) @map("last_activity_at")
+
+  images        Image[]
+  comments      Comment[]
+  likes         Like[]
+  notifications Notification[]
+  bookmarks     Bookmark[]
+
+  createdAt      DateTime   @default(now()) @map("created_at")
+  updatedAt      DateTime   @updatedAt @map("updated_at")
+  tripDiscussion Trip?      @relation("TripDiscussion")
+  gear           PostGear[]
+
+  @@index([authorId])
+  @@index([createdAt])
+  @@index([categoryKey])
+  @@index([pinned, lastActivityAt])
+  @@index([language])
+  @@map("community_posts")
+}
+
+model Comment {
+  id       Int    @id @default(autoincrement())
+  content  String
+  authorId Int    @map("author_id")
+  author   User   @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  articleId       Int?           @map("article_id")
+  article         Article?       @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  photoPostId     Int?           @map("photo_post_id")
+  photoPost       PhotoPost?     @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  communityPostId Int?           @map("community_post_id")
+  communityPost   CommunityPost? @relation(fields: [communityPostId], references: [id], onDelete: Cascade)
+
+  /// Replies are one level deep: a reply's parent is always a top-level comment.
+  parentId Int?      @map("parent_id")
+  parent   Comment?  @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  replies  Comment[] @relation("CommentReplies")
+  edited   Boolean   @default(false)
+
+  notifications Notification[]
+  likes         Like[]
+  acceptedFor   CommunityPost? @relation("AcceptedAnswer")
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([articleId])
+  @@index([photoPostId])
+  @@index([communityPostId])
+  @@index([parentId])
+  @@map("comments")
+}
+
+model Like {
+  id     Int  @id @default(autoincrement())
+  userId Int  @map("user_id")
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  articleId       Int?           @map("article_id")
+  article         Article?       @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  photoPostId     Int?           @map("photo_post_id")
+  photoPost       PhotoPost?     @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  communityPostId Int?           @map("community_post_id")
+  communityPost   CommunityPost? @relation(fields: [communityPostId], references: [id], onDelete: Cascade)
+  commentId       Int?           @map("comment_id")
+  comment         Comment?       @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  tripId          Int?           @map("trip_id")
+  trip            Trip?          @relation(fields: [tripId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  // NULLs are distinct in Postgres, so each pair is unique only for its own target type.
+  @@unique([userId, articleId])
+  @@unique([userId, photoPostId])
+  @@unique([userId, communityPostId])
+  @@unique([userId, commentId])
+  @@map("likes")
+}
+
+model Poll {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String?
+  endsAt      DateTime @map("ends_at")
+  authorId    Int      @map("author_id")
+  author      User     @relation(fields: [authorId], references: [id], onDelete: Cascade)
+
+  options PollOption[]
+  ballots PollBallot[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([endsAt])
+  @@map("polls")
+}
+
+model PollOption {
+  id       Int          @id @default(autoincrement())
+  text     String
+  position Int          @default(0)
+  pollId   Int          @map("poll_id")
+  poll     Poll         @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  ballots  PollBallot[]
+
+  @@map("poll_options")
+}
+
+model PollBallot {
+  id       Int        @id @default(autoincrement())
+  userId   Int        @map("user_id")
+  user     User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  pollId   Int        @map("poll_id")
+  poll     Poll       @relation(fields: [pollId], references: [id], onDelete: Cascade)
+  optionId Int        @map("option_id")
+  option   PollOption @relation(fields: [optionId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([userId, pollId])
+  @@map("poll_ballots")
 }
 
 model Image {
-  id              Int            @id @default(autoincrement())
-  url             String
-  publicId        String // 新增 publicId 欄位
-  photoPostId     Int?
-  communityPostId Int?
-  articleId       Int?
+  id       Int    @id @default(autoincrement())
+  url      String
+  publicId String @unique @map("public_id")
+  width    Int?
+  height   Int?
+  position Int    @default(0)
+  ownerId  Int?   @map("owner_id")
+  owner    User?  @relation(fields: [ownerId], references: [id], onDelete: SetNull)
+
+  photoPostId     Int?           @map("photo_post_id")
+  photoPost       PhotoPost?     @relation(fields: [photoPostId], references: [id], onDelete: SetNull)
+  communityPostId Int?           @map("community_post_id")
+  communityPost   CommunityPost? @relation(fields: [communityPostId], references: [id], onDelete: SetNull)
+  articleId       Int?           @map("article_id")
+  article         Article?       @relation(fields: [articleId], references: [id], onDelete: SetNull)
+  /// Held by a draft outing until it is published (then moved to the observation).
+  outingId        Int?           @map("outing_id")
+  outing          Outing?        @relation(fields: [outingId], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@index([ownerId])
+  @@map("images")
+}
+
+model Species {
+  id                Int                @id @default(autoincrement())
+  commonName        String             @unique @map("common_name") // Chinese name
+  scientificName    String             @unique @map("scientific_name")
+  englishName       String?            @map("english_name")
+  group             SpeciesGroup
+  status            ConservationStatus @default(LC)
+  /// Sensitive species never expose exact photo coordinates (poaching / disturbance risk).
+  sensitive         Boolean            @default(false)
+  description       String?
+  descriptionEn     String?            @map("description_en")
+  coverImageUrl     String?            @map("cover_image_url")
+  /// iNaturalist taxon (taxonomy source).
+  inatTaxonId       Int?               @unique @map("inat_taxon_id")
+  /// Scientific names of the order and family, with localised names { "zh-TW", "en" }.
+  taxonOrder        String?            @map("taxon_order")
+  taxonFamily       String?            @map("taxon_family")
+  orderNames        Json?              @map("order_names")
+  familyNames       Json?              @map("family_names")
+  /// Field marks { "zh-TW", "en" }; only where written from a reliable source.
+  identification    Json?
+  /// Species easily confused with this one (shown side by side).
+  similarSpeciesIds Int[]              @default([]) @map("similar_species_ids")
+
+  photoPosts      PhotoPost[]
+  identifications Identification[]
+  outingSpecies   OutingSpecies[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([taxonFamily])
+  @@map("species")
+}
+
+model Notification {
+  id          Int              @id @default(autoincrement())
+  type        NotificationType
+  recipientId Int              @map("recipient_id")
+  recipient   User             @relation("NotificationRecipient", fields: [recipientId], references: [id], onDelete: Cascade)
+  actorId     Int              @map("actor_id")
+  actor       User             @relation("NotificationActor", fields: [actorId], references: [id], onDelete: Cascade)
+
+  photoPostId     Int?           @map("photo_post_id")
   photoPost       PhotoPost?     @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  communityPostId Int?           @map("community_post_id")
   communityPost   CommunityPost? @relation(fields: [communityPostId], references: [id], onDelete: Cascade)
+  articleId       Int?           @map("article_id")
+  article         Article?       @relation(fields: [articleId], references: [id], onDelete: Cascade)
+  commentId       Int?           @map("comment_id")
+  comment         Comment?       @relation(fields: [commentId], references: [id], onDelete: Cascade)
+
+  readAt    DateTime? @map("read_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+  trip      Trip?     @relation(fields: [tripId], references: [id])
+  tripId    Int?
+
+  @@index([recipientId, readAt, createdAt])
+  @@map("notifications")
+}
+
+/// Opaque refresh token (only its SHA-256 is stored). Rotated on every use; reusing a
+/// rotated token revokes the whole family (= one login session / device).
+model RefreshToken {
+  id        Int       @id @default(autoincrement())
+  tokenHash String    @unique @map("token_hash")
+  familyId  String    @map("family_id")
+  userId    Int       @map("user_id")
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime  @map("expires_at")
+  usedAt    DateTime? @map("used_at")
+  revokedAt DateTime? @map("revoked_at")
+  createdAt DateTime  @default(now()) @map("created_at")
+
+  @@index([userId])
+  @@index([familyId])
+  @@map("refresh_tokens")
+}
+
+/// One-time e-mail tokens (verification / password reset); only the SHA-256 is stored.
+model EmailToken {
+  id        Int            @id @default(autoincrement())
+  type      EmailTokenType
+  tokenHash String         @unique @map("token_hash")
+  userId    Int            @map("user_id")
+  user      User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+  expiresAt DateTime       @map("expires_at")
+  usedAt    DateTime?      @map("used_at")
+  createdAt DateTime       @default(now()) @map("created_at")
+
+  @@index([userId, type])
+  @@map("email_tokens")
+}
+
+model Follow {
+  followerId  Int      @map("follower_id")
+  follower    User     @relation("Follower", fields: [followerId], references: [id], onDelete: Cascade)
+  followingId Int      @map("following_id")
+  following   User     @relation("Following", fields: [followingId], references: [id], onDelete: Cascade)
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  @@id([followerId, followingId])
+  @@index([followingId])
+  @@map("follows")
+}
+
+model Block {
+  blockerId Int      @map("blocker_id")
+  blocker   User     @relation("Blocker", fields: [blockerId], references: [id], onDelete: Cascade)
+  blockedId Int      @map("blocked_id")
+  blocked   User     @relation("Blocked", fields: [blockedId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@id([blockerId, blockedId])
+  @@index([blockedId])
+  @@map("blocks")
+}
+
+model Bookmark {
+  id     Int  @id @default(autoincrement())
+  userId Int  @map("user_id")
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  photoPostId     Int?           @map("photo_post_id")
+  photoPost       PhotoPost?     @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  communityPostId Int?           @map("community_post_id")
+  communityPost   CommunityPost? @relation(fields: [communityPostId], references: [id], onDelete: Cascade)
+  articleId       Int?           @map("article_id")
   article         Article?       @relation(fields: [articleId], references: [id], onDelete: Cascade)
 
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  createdAt DateTime @default(now()) @map("created_at")
 
-  @@map("images")
+  @@unique([userId, photoPostId])
+  @@unique([userId, communityPostId])
+  @@unique([userId, articleId])
+  @@map("bookmarks")
+}
+
+/// A user's species suggestion for a photo (one per user per photo).
+model Identification {
+  id          Int       @id @default(autoincrement())
+  photoPostId Int       @map("photo_post_id")
+  photoPost   PhotoPost @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  userId      Int       @map("user_id")
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  speciesId   Int       @map("species_id")
+  species     Species   @relation(fields: [speciesId], references: [id], onDelete: Cascade)
+  comment     String?
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([photoPostId, userId])
+  @@index([speciesId])
+  @@map("identifications")
+}
+
+/// User report of content or another user. targetId has no FK: the target may be deleted.
+model Report {
+  id             Int              @id @default(autoincrement())
+  reporterId     Int              @map("reporter_id")
+  reporter       User             @relation("Reporter", fields: [reporterId], references: [id], onDelete: Cascade)
+  targetType     ReportTargetType @map("target_type")
+  targetId       Int              @map("target_id")
+  reason         ReportReason
+  note           String?
+  status         ReportStatus     @default(OPEN)
+  resolutionNote String?          @map("resolution_note")
+  resolvedAt     DateTime?        @map("resolved_at")
+  resolvedById   Int?             @map("resolved_by_id")
+  resolvedBy     User?            @relation("ReportResolver", fields: [resolvedById], references: [id], onDelete: SetNull)
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([status, createdAt])
+  @@index([targetType, targetId])
+  @@index([reporterId, targetType, targetId])
+  @@map("reports")
+}
+
+/// Forum board. name / description are { "zh-TW": string, en: string }.
+model ForumCategory {
+  id          Int     @id @default(autoincrement())
+  key         String  @unique
+  name        Json
+  description Json
+  color       String
+  /// Emoji
+  icon        String
+  position    Int     @default(0)
+  /// Only admins may start threads here (e.g. announcements).
+  adminOnly   Boolean @default(false) @map("admin_only")
+
+  posts CommunityPost[]
+
+  @@map("forum_categories")
+}
+
+/// Machine translations of user content, keyed by sha256(target + text).
+model TranslationCache {
+  hash      String   @id
+  target    String
+  text      String
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@map("translation_cache")
+}
+
+/// A themed photo challenge: submissions → community vote → results.
+model Challenge {
+  id            Int           @id @default(autoincrement())
+  slug          String        @unique
+  /// { "zh-TW": string, "en": string }
+  title         Json
+  /// Short brief shown on cards and the challenge page.
+  brief         Json
+  /// Bullet-point rules, per locale: { "zh-TW": string[], "en": string[] }
+  rules         Json
+  coverUrl      String        @map("cover_url")
+  /// CSS object-position for the cover crop (keeps the subject in frame).
+  coverPosition String        @default("50% 50%") @map("cover_position")
+  startsAt      DateTime      @map("starts_at")
+  submitEndsAt  DateTime      @map("submit_ends_at")
+  voteEndsAt    DateTime      @map("vote_ends_at")
+  /// Optional: only photos of this species group may enter.
+  speciesGroup  SpeciesGroup? @map("species_group")
+
+  entries ChallengeEntry[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([startsAt])
+  @@map("challenges")
+}
+
+model ChallengeEntry {
+  id          Int       @id @default(autoincrement())
+  challengeId Int       @map("challenge_id")
+  challenge   Challenge @relation(fields: [challengeId], references: [id], onDelete: Cascade)
+  photoPostId Int       @map("photo_post_id")
+  photoPost   PhotoPost @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  userId      Int       @map("user_id")
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  votes ChallengeVote[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([challengeId, photoPostId])
+  @@index([challengeId, userId])
+  @@map("challenge_entries")
+}
+
+model ChallengeVote {
+  id          Int            @id @default(autoincrement())
+  entryId     Int            @map("entry_id")
+  entry       ChallengeEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+  /// Denormalised so the per-challenge vote limit is a single indexed count.
+  challengeId Int            @map("challenge_id")
+  userId      Int            @map("user_id")
+  user        User           @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@unique([entryId, userId])
+  @@index([challengeId, userId])
+  @@map("challenge_votes")
+}
+
+/// A field trip / photo walk organised by a member.
+model Trip {
+  id               Int            @id @default(autoincrement())
+  title            String
+  description      String
+  organizerId      Int            @map("organizer_id")
+  organizer        User           @relation("TripOrganizer", fields: [organizerId], references: [id], onDelete: Cascade)
+  startsAt         DateTime       @map("starts_at")
+  endsAt           DateTime       @map("ends_at")
+  meetingPoint     String         @map("meeting_point")
+  latitude         Float
+  longitude        Float
+  capacity         Int
+  difficulty       TripDifficulty @default(EASY)
+  /// Species the group hopes to see (ids into the species catalogue).
+  targetSpeciesIds Int[]          @default([]) @map("target_species_ids")
+  /// Suggested gear, free text.
+  gear             String         @default("")
+  language         String         @default("zh-TW")
+  cancelled        Boolean        @default(false)
+  /// The forum thread used as the trip's discussion.
+  discussionId     Int?           @unique @map("discussion_id")
+  discussion       CommunityPost? @relation("TripDiscussion", fields: [discussionId], references: [id], onDelete: SetNull)
+  placeId          Int?           @map("place_id")
+  place            Place?         @relation(fields: [placeId], references: [id], onDelete: SetNull)
+
+  members       TripMember[]
+  photos        PhotoPost[]
+  outings       Outing[]
+  notifications Notification[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+  likes     Like[]
+
+  @@index([startsAt])
+  @@index([organizerId])
+  @@index([placeId])
+  @@map("trips")
+}
+
+model TripMember {
+  tripId Int              @map("trip_id")
+  trip   Trip             @relation(fields: [tripId], references: [id], onDelete: Cascade)
+  userId Int              @map("user_id")
+  user   User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status TripMemberStatus @default(GOING)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@id([tripId, userId])
+  @@index([userId])
+  @@map("trip_members")
+}
+
+/// Structured feedback on a photo (1–5 per aspect + a written note).
+model Critique {
+  id          Int       @id @default(autoincrement())
+  photoPostId Int       @map("photo_post_id")
+  photoPost   PhotoPost @relation(fields: [photoPostId], references: [id], onDelete: Cascade)
+  userId      Int       @map("user_id")
+  user        User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  composition Int
+  light       Int
+  focus       Int
+  moment      Int
+  comment     String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([photoPostId, userId])
+  @@map("critiques")
+}
+
+/// A camera body, lens or teleconverter in the gear catalogue.
+model Gear {
+  id            Int      @id @default(autoincrement())
+  slug          String   @unique
+  type          GearType
+  brand         String
+  model         String
+  /// Lens mount (bodies: the mount they take; lenses/converters: the mount they fit).
+  mount         String
+  /// Lenses: focal range in mm (equal for primes).
+  focalMinMm    Int?     @map("focal_min_mm")
+  focalMaxMm    Int?     @map("focal_max_mm")
+  /// Lenses: maximum aperture (f-number) at the wide and tele end.
+  apertureWide  Float?   @map("aperture_wide")
+  apertureTele  Float?   @map("aperture_tele")
+  /// Teleconverters: 1.4, 2.0 …
+  magnification Float?
+  /// Bodies: sensor format, resolution and burst rate.
+  sensor        String?
+  megapixels    Float?
+  maxFps        Float?   @map("max_fps")
+  weightG       Int?     @map("weight_g")
+  releasedYear  Int?     @map("released_year")
+  /// EXIF model / lens strings that identify this item (matched after normalisation).
+  aliases       String[] @default([])
+
+  photosAsCamera PhotoPost[]  @relation("PhotoCamera")
+  photosAsLens   PhotoPost[]  @relation("PhotoLens")
+  reviews        GearReview[]
+  owners         UserGear[]
+  posts          PostGear[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([type, brand])
+  @@map("gear")
+}
+
+/// Structured review: 1–5 per aspect, use cases, and a note. One per user per item.
+model GearReview {
+  id          Int      @id @default(autoincrement())
+  gearId      Int      @map("gear_id")
+  gear        Gear     @relation(fields: [gearId], references: [id], onDelete: Cascade)
+  userId      Int      @map("user_id")
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  sharpness   Int
+  autofocus   Int
+  portability Int
+  value       Int
+  /// Keys from GEAR_USE_CASES (birds-in-flight, perched-birds, mammals, low-light, travel, macro …).
+  useCases    String[] @default([]) @map("use_cases")
+  comment     String
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@unique([gearId, userId])
+  @@map("gear_reviews")
+}
+
+/// "My gear": what a photographer owns / uses.
+model UserGear {
+  userId Int  @map("user_id")
+  user   User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  gearId Int  @map("gear_id")
+  gear   Gear @relation(fields: [gearId], references: [id], onDelete: Cascade)
+
+  createdAt DateTime @default(now()) @map("created_at")
+
+  @@id([userId, gearId])
+  @@index([gearId])
+  @@map("user_gear")
+}
+
+/// Gear mentioned by a forum topic (reviews, questions, comparisons).
+model PostGear {
+  postId Int           @map("post_id")
+  post   CommunityPost @relation(fields: [postId], references: [id], onDelete: Cascade)
+  gearId Int           @map("gear_id")
+  gear   Gear          @relation(fields: [gearId], references: [id], onDelete: Cascade)
+
+  @@id([postId, gearId])
+  @@index([gearId])
+  @@map("post_gear")
+}
+
+/// A photographable site (reserve, wetland, forest road, park). Observations, trips and (later)
+/// outings, condition reports and surveys hang off it. Text fields are { "zh-TW": …, "en": … }.
+model Place {
+  id          Int         @id @default(autoincrement())
+  slug        String      @unique
+  name        Json
+  kind        PlaceKind
+  /// ISO 3166-1 alpha-2
+  countryCode String      @map("country_code")
+  /// Regional cluster for seasonal statistics: taiwan, japan, east-africa, europe, north-america, oceania, other.
+  area        String      @default("other")
+  region      Json
+  latitude    Float
+  longitude   Float
+  radiusM     Int         @map("radius_m")
+  /// IANA time zone, for local hours and light.
+  timezone    String
+  description Json?
+  /// { "zh-TW": { transport, hours? }, "en": { … } }
+  access      Json?
+  /// { "zh-TW": string[], "en": string[] }
+  guidelines  Json?
+  coverUrl    String?     @map("cover_url")
+  status      PlaceStatus @default(PROPOSED)
+  createdById Int?        @map("created_by_id")
+  createdBy   User?       @relation("PlaceCreator", fields: [createdById], references: [id], onDelete: SetNull)
+  reviewedAt  DateTime?   @map("reviewed_at")
+
+  photos  PhotoPost[]
+  trips   Trip[]
+  outings Outing[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([status])
+  @@index([area])
+  @@index([createdById])
+  @@map("places")
+}
+
+/// One time out in the field: a time span at a place, its weather and light, the species
+/// recorded (a checklist, including ones seen or heard but not photographed), the
+/// observations made, and notes. The unit photographers actually work in.
+model Outing {
+  id                Int               @id @default(autoincrement())
+  authorId          Int               @map("author_id")
+  author            User              @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  title             String
+  placeId           Int?              @map("place_id")
+  place             Place?            @relation(fields: [placeId], references: [id], onDelete: SetNull)
+  locationName      String            @map("location_name")
+  latitude          Float
+  longitude         Float
+  locationPrecision LocationPrecision @default(EXACT) @map("location_precision")
+  area              String            @default("other")
+  startedAt         DateTime          @map("started_at")
+  endedAt           DateTime          @map("ended_at")
+  /// IANA zone of the location (local times, light).
+  timezone          String
+  /// Quill Delta.
+  notes             Json?
+  /// { temperatureMin, temperatureMax, cloudCover, windSpeed, precipitation, source, fetchedAt }; null when unavailable.
+  weather           Json?
+  distanceKm        Float?            @map("distance_km")
+  tripId            Int?              @map("trip_id")
+  trip              Trip?             @relation(fields: [tripId], references: [id], onDelete: SetNull)
+  status            OutingStatus      @default(DRAFT)
+  /// Batch-upload state while DRAFT: observations being assembled (see outings/draft.ts).
+  draft             Json?
+  language          String            @default("zh-TW")
+  publishedAt       DateTime?         @map("published_at")
+
+  species OutingSpecies[]
+  photos  PhotoPost[]
+  images  Image[]
+
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([authorId, status])
+  @@index([placeId])
+  @@index([tripId])
+  @@index([startedAt])
+  @@index([area])
+  @@map("outings")
+}
+
+/// A species on an outing's checklist. Observed species are added on publish; others can be
+/// entered by hand (seen but not photographed, or heard only).
+model OutingSpecies {
+  outingId  Int     @map("outing_id")
+  outing    Outing  @relation(fields: [outingId], references: [id], onDelete: Cascade)
+  speciesId Int     @map("species_id")
+  species   Species @relation(fields: [speciesId], references: [id], onDelete: Cascade)
+  count     Int?
+  note      String?
+  heardOnly Boolean @default(false) @map("heard_only")
+
+  @@id([outingId, speciesId])
+  @@index([speciesId])
+  @@map("outing_species")
 }

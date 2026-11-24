@@ -1,0 +1,1738 @@
+{
+ "species": {
+  "Vulpes vulpes": {
+   "taxonId": 42069,
+   "order": "Carnivora",
+   "family": "Canidae"
+  },
+  "Panthera leo": {
+   "taxonId": 41964,
+   "order": "Carnivora",
+   "family": "Felidae"
+  },
+  "Ailuropoda melanoleuca": {
+   "taxonId": 41659,
+   "order": "Carnivora",
+   "family": "Ursidae"
+  },
+  "Chelonia mydas": {
+   "taxonId": 39659,
+   "order": "Testudines",
+   "family": "Cheloniidae"
+  },
+  "Phascolarctos cinereus": {
+   "taxonId": 42983,
+   "order": "Diprotodontia",
+   "family": "Phascolarctidae"
+  },
+  "Panthera pardus": {
+   "taxonId": 41963,
+   "order": "Carnivora",
+   "family": "Felidae"
+  },
+  "Alcedo atthis": {
+   "taxonId": 2599,
+   "order": "Coraciiformes",
+   "family": "Alcedinidae"
+  },
+  "Elephas maximus": {
+   "taxonId": 43697,
+   "order": "Proboscidea",
+   "family": "Elephantidae"
+  },
+  "Loxodonta africana": {
+   "taxonId": 43694,
+   "order": "Proboscidea",
+   "family": "Elephantidae"
+  },
+  "Ceratotherium simum": {
+   "taxonId": 43348,
+   "order": "Perissodactyla",
+   "family": "Rhinocerotidae"
+  },
+  "Procyon lotor": {
+   "taxonId": 41663,
+   "order": "Carnivora",
+   "family": "Procyonidae"
+  },
+  "Odocoileus virginianus": {
+   "taxonId": 42223,
+   "order": "Artiodactyla",
+   "family": "Cervidae"
+  },
+  "Macaca cyclopis": {
+   "taxonId": 43450,
+   "order": "Primates",
+   "family": "Cercopithecidae"
+  },
+  "Muntiacus reevesi": {
+   "taxonId": 42187,
+   "order": "Artiodactyla",
+   "family": "Cervidae"
+  },
+  "Ursus thibetanus formosanus": {
+   "taxonId": 41647,
+   "order": "Carnivora",
+   "family": "Ursidae"
+  },
+  "Lophura swinhoii": {
+   "taxonId": 1094,
+   "order": "Galliformes",
+   "family": "Phasianidae"
+  },
+  "Urocissa caerulea": {
+   "taxonId": 8415,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Platalea minor": {
+   "taxonId": 3729,
+   "order": "Pelecaniformes",
+   "family": "Threskiornithidae"
+  },
+  "Syrmaticus mikado": {
+   "taxonId": 1158,
+   "order": "Galliformes",
+   "family": "Phasianidae"
+  },
+  "Prionailurus bengalensis": {
+   "taxonId": 922738,
+   "order": "Carnivora",
+   "family": "Felidae"
+  },
+  "Manis pentadactyla": {
+   "taxonId": 43366,
+   "order": "Pholidota",
+   "family": "Manidae"
+  },
+  "Otus lettia": {
+   "taxonId": 144586,
+   "order": "Strigiformes",
+   "family": "Strigidae"
+  },
+  "Spilornis cheela": {
+   "taxonId": 5158,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Psilopogon nuchalis": {
+   "taxonId": 367544,
+   "order": "Piciformes",
+   "family": "Megalaimidae"
+  },
+  "Zhangixalus arvalis": {
+   "taxonId": 923279,
+   "order": "Anura",
+   "family": "Rhacophoridae"
+  },
+  "Zhangixalus moltrechti": {
+   "taxonId": 923294,
+   "order": "Anura",
+   "family": "Rhacophoridae"
+  },
+  "Pycnonotus sinensis": {
+   "taxonId": 14621,
+   "order": "Passeriformes",
+   "family": "Pycnonotidae"
+  },
+  "Accipiter trivirgatus": {
+   "taxonId": 1582801,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Capricornis swinhoei": {
+   "taxonId": 74144,
+   "order": "Artiodactyla",
+   "family": "Bovidae"
+  },
+  "Martes flavigula": {
+   "taxonId": 41791,
+   "order": "Carnivora",
+   "family": "Mustelidae"
+  },
+  "Callosciurus erythraeus": {
+   "taxonId": 45952,
+   "order": "Rodentia",
+   "family": "Sciuridae"
+  },
+  "Myophonus insularis": {
+   "taxonId": 73078,
+   "order": "Passeriformes",
+   "family": "Muscicapidae"
+  },
+  "Cuora flavomarginata": {
+   "taxonId": 68335,
+   "order": "Testudines",
+   "family": "Geoemydidae"
+  },
+  "Oncorhynchus formosanus": {
+   "taxonId": 340557,
+   "order": "Salmoniformes",
+   "family": "Salmonidae"
+  },
+  "Euploea mulciber": {
+   "taxonId": 125591,
+   "order": "Lepidoptera",
+   "family": "Nymphalidae"
+  },
+  "Equus quagga": {
+   "taxonId": 43335,
+   "order": "Perissodactyla",
+   "family": "Equidae"
+  },
+  "Panthera tigris": {
+   "taxonId": 41967,
+   "order": "Carnivora",
+   "family": "Felidae"
+  },
+  "Grus japonensis": {
+   "taxonId": 39,
+   "order": "Gruiformes",
+   "family": "Gruidae"
+  },
+  "Balearica regulorum": {
+   "taxonId": 53,
+   "order": "Gruiformes",
+   "family": "Gruidae"
+  },
+  "Meleagris gallopavo": {
+   "taxonId": 906,
+   "order": "Galliformes",
+   "family": "Phasianidae"
+  },
+  "Lagopus lagopus": {
+   "taxonId": 931,
+   "order": "Galliformes",
+   "family": "Phasianidae"
+  },
+  "Callipepla gambelii": {
+   "taxonId": 1406,
+   "order": "Galliformes",
+   "family": "Odontophoridae"
+  },
+  "Coracias caudatus": {
+   "taxonId": 2269,
+   "order": "Coraciiformes",
+   "family": "Coraciidae"
+  },
+  "Todiramphus macleayii": {
+   "taxonId": 2481,
+   "order": "Coraciiformes",
+   "family": "Alcedinidae"
+  },
+  "Streptopelia orientalis": {
+   "taxonId": 2927,
+   "order": "Columbiformes",
+   "family": "Columbidae"
+  },
+  "Platalea leucorodia": {
+   "taxonId": 3731,
+   "order": "Pelecaniformes",
+   "family": "Threskiornithidae"
+  },
+  "Platalea alba": {
+   "taxonId": 3734,
+   "order": "Pelecaniformes",
+   "family": "Threskiornithidae"
+  },
+  "Threskiornis aethiopicus": {
+   "taxonId": 3739,
+   "order": "Pelecaniformes",
+   "family": "Threskiornithidae"
+  },
+  "Plegadis falcinellus": {
+   "taxonId": 3756,
+   "order": "Pelecaniformes",
+   "family": "Threskiornithidae"
+  },
+  "Calidris maritima": {
+   "taxonId": 3856,
+   "order": "Charadriiformes",
+   "family": "Scolopacidae"
+  },
+  "Thalassarche cauta": {
+   "taxonId": 4088,
+   "order": "Procellariiformes",
+   "family": "Diomedeidae"
+  },
+  "Daption capense": {
+   "taxonId": 4168,
+   "order": "Procellariiformes",
+   "family": "Procellariidae"
+  },
+  "Macronectes halli": {
+   "taxonId": 4197,
+   "order": "Procellariiformes",
+   "family": "Procellariidae"
+  },
+  "Tachybaptus ruficollis": {
+   "taxonId": 4237,
+   "order": "Podicipediformes",
+   "family": "Podicipedidae"
+  },
+  "Phalacrocorax carbo": {
+   "taxonId": 4270,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Phalacrocorax punctatus": {
+   "taxonId": 4292,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Phalacrocorax capillatus": {
+   "taxonId": 4293,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Pelecanus conspicillatus": {
+   "taxonId": 4326,
+   "order": "Pelecaniformes",
+   "family": "Pelecanidae"
+  },
+  "Larus hyperboreus": {
+   "taxonId": 4349,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Larus schistisagus": {
+   "taxonId": 4366,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Larus marinus": {
+   "taxonId": 4368,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Larus crassirostris": {
+   "taxonId": 4370,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Larus pacificus": {
+   "taxonId": 4390,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Rissa tridactyla": {
+   "taxonId": 4494,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Fratercula arctica": {
+   "taxonId": 4504,
+   "order": "Charadriiformes",
+   "family": "Alcidae"
+  },
+  "Irediparra gallinacea": {
+   "taxonId": 4582,
+   "order": "Charadriiformes",
+   "family": "Jacanidae"
+  },
+  "Actophilornis africanus": {
+   "taxonId": 4585,
+   "order": "Charadriiformes",
+   "family": "Jacanidae"
+  },
+  "Himantopus himantopus": {
+   "taxonId": 4835,
+   "order": "Charadriiformes",
+   "family": "Recurvirostridae"
+  },
+  "Haematopus longirostris": {
+   "taxonId": 4846,
+   "order": "Charadriiformes",
+   "family": "Haematopodidae"
+  },
+  "Haematopus unicolor": {
+   "taxonId": 4848,
+   "order": "Charadriiformes",
+   "family": "Haematopodidae"
+  },
+  "Vanellus senegallus": {
+   "taxonId": 4868,
+   "order": "Charadriiformes",
+   "family": "Charadriidae"
+  },
+  "Pluvialis fulva": {
+   "taxonId": 4896,
+   "order": "Charadriiformes",
+   "family": "Charadriidae"
+  },
+  "Egretta garzetta": {
+   "taxonId": 4943,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Egretta sacra": {
+   "taxonId": 4947,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Ardea cinerea": {
+   "taxonId": 4954,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Nycticorax nycticorax": {
+   "taxonId": 4981,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Nycticorax caledonicus": {
+   "taxonId": 4988,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Anhinga novaehollandiae": {
+   "taxonId": 5061,
+   "order": "Suliformes",
+   "family": "Anhingidae"
+  },
+  "Anhinga anhinga": {
+   "taxonId": 5063,
+   "order": "Suliformes",
+   "family": "Anhingidae"
+  },
+  "Aquila rapax": {
+   "taxonId": 5079,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Buteo lineatus": {
+   "taxonId": 5206,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Milvus migrans": {
+   "taxonId": 5268,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Haliaeetus pelagicus": {
+   "taxonId": 5304,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Haliaeetus leucocephalus": {
+   "taxonId": 5305,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Haliaeetus albicilla": {
+   "taxonId": 5309,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Haliastur sphenurus": {
+   "taxonId": 5407,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Dendrocygna eytoni": {
+   "taxonId": 6895,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Dendrocygna viduata": {
+   "taxonId": 6898,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Anseranas semipalmata": {
+   "taxonId": 6905,
+   "order": "Anseriformes",
+   "family": "Anseranatidae"
+  },
+  "Cygnus buccinator": {
+   "taxonId": 6915,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Anas platyrhynchos": {
+   "taxonId": 6930,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Anas acuta": {
+   "taxonId": 6933,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Mergus merganser": {
+   "taxonId": 7004,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Somateria mollissima": {
+   "taxonId": 7024,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Tadorna variegata": {
+   "taxonId": 7072,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Histrionicus histrionicus": {
+   "taxonId": 7111,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Cereopsis novaehollandiae": {
+   "taxonId": 7150,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Clangula hyemalis": {
+   "taxonId": 7170,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Eremopterix leucopareia": {
+   "taxonId": 7372,
+   "order": "Passeriformes",
+   "family": "Alaudidae"
+  },
+  "Certhia familiaris": {
+   "taxonId": 7450,
+   "order": "Passeriformes",
+   "family": "Certhiidae"
+  },
+  "Cinclus pallasii": {
+   "taxonId": 7642,
+   "order": "Passeriformes",
+   "family": "Cinclidae"
+  },
+  "Cinclus cinclus": {
+   "taxonId": 7647,
+   "order": "Passeriformes",
+   "family": "Cinclidae"
+  },
+  "Corvus corax": {
+   "taxonId": 8010,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Corvus macrorhynchos": {
+   "taxonId": 8026,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Zonotrichia leucophrys": {
+   "taxonId": 9176,
+   "order": "Passeriformes",
+   "family": "Passerellidae"
+  },
+  "Agelaius phoeniceus": {
+   "taxonId": 9744,
+   "order": "Passeriformes",
+   "family": "Icteridae"
+  },
+  "Fringilla coelebs": {
+   "taxonId": 10070,
+   "order": "Passeriformes",
+   "family": "Fringillidae"
+  },
+  "Malurus cyaneus": {
+   "taxonId": 12065,
+   "order": "Passeriformes",
+   "family": "Maluridae"
+  },
+  "Niltava vivida": {
+   "taxonId": 12805,
+   "order": "Passeriformes",
+   "family": "Muscicapidae"
+  },
+  "Passer domesticus": {
+   "taxonId": 13858,
+   "order": "Passeriformes",
+   "family": "Passeridae"
+  },
+  "Pycnonotus taivanus": {
+   "taxonId": 14619,
+   "order": "Passeriformes",
+   "family": "Pycnonotidae"
+  },
+  "Lamprotornis superbus": {
+   "taxonId": 14939,
+   "order": "Passeriformes",
+   "family": "Sturnidae"
+  },
+  "Heterophasia auricularis": {
+   "taxonId": 15100,
+   "order": "Passeriformes",
+   "family": "Leiothrichidae"
+  },
+  "Yuhina brunneiceps": {
+   "taxonId": 15323,
+   "order": "Passeriformes",
+   "family": "Zosteropidae"
+  },
+  "Dendrocopos major": {
+   "taxonId": 17871,
+   "order": "Piciformes",
+   "family": "Picidae"
+  },
+  "Strix uralensis": {
+   "taxonId": 19910,
+   "order": "Strigiformes",
+   "family": "Strigidae"
+  },
+  "Struthio camelus": {
+   "taxonId": 20526,
+   "order": "Struthioniformes",
+   "family": "Struthionidae"
+  },
+  "Rana temporaria": {
+   "taxonId": 25591,
+   "order": "Anura",
+   "family": "Ranidae"
+  },
+  "Fejervarya limnocharis": {
+   "taxonId": 26053,
+   "order": "Anura",
+   "family": "Dicroglossidae"
+  },
+  "Crocodylus porosus": {
+   "taxonId": 26068,
+   "order": "Crocodylia",
+   "family": "Crocodylidae"
+  },
+  "Alligator mississippiensis": {
+   "taxonId": 26159,
+   "order": "Crocodylia",
+   "family": "Alligatoridae"
+  },
+  "Trimeresurus stejnegeri": {
+   "taxonId": 30953,
+   "order": "Squamata",
+   "family": "Viperidae"
+  },
+  "Agama mwanzae": {
+   "taxonId": 31132,
+   "order": "Squamata",
+   "family": "Agamidae"
+  },
+  "Anolis carolinensis": {
+   "taxonId": 36514,
+   "order": "Squamata",
+   "family": "Anolidae"
+  },
+  "Eutropis longicaudata": {
+   "taxonId": 38021,
+   "order": "Squamata",
+   "family": "Scincidae"
+  },
+  "Varanus rosenbergi": {
+   "taxonId": 39441,
+   "order": "Squamata",
+   "family": "Varanidae"
+  },
+  "Apalone ferox": {
+   "taxonId": 39566,
+   "order": "Testudines",
+   "family": "Trionychidae"
+  },
+  "Pseudemys nelsoni": {
+   "taxonId": 39824,
+   "order": "Testudines",
+   "family": "Emydidae"
+  },
+  "Mauremys sinensis": {
+   "taxonId": 39950,
+   "order": "Testudines",
+   "family": "Geoemydidae"
+  },
+  "Arctocephalus forsteri": {
+   "taxonId": 41752,
+   "order": "Carnivora",
+   "family": "Otariidae"
+  },
+  "Neophoca cinerea": {
+   "taxonId": 41759,
+   "order": "Carnivora",
+   "family": "Otariidae"
+  },
+  "Crocuta crocuta": {
+   "taxonId": 41886,
+   "order": "Carnivora",
+   "family": "Hyaenidae"
+  },
+  "Canis lupus": {
+   "taxonId": 42048,
+   "order": "Carnivora",
+   "family": "Canidae"
+  },
+  "Canis latrans": {
+   "taxonId": 42051,
+   "order": "Carnivora",
+   "family": "Canidae"
+  },
+  "Pecari tajacu": {
+   "taxonId": 42113,
+   "order": "Artiodactyla",
+   "family": "Tayassuidae"
+  },
+  "Hippopotamus amphibius": {
+   "taxonId": 42149,
+   "order": "Artiodactyla",
+   "family": "Hippopotamidae"
+  },
+  "Odocoileus hemionus": {
+   "taxonId": 42220,
+   "order": "Artiodactyla",
+   "family": "Cervidae"
+  },
+  "Antilocapra americana": {
+   "taxonId": 42429,
+   "order": "Artiodactyla",
+   "family": "Antilocapridae"
+  },
+  "Heterohyrax brucei": {
+   "taxonId": 43088,
+   "order": "Hyracoidea",
+   "family": "Procaviidae"
+  },
+  "Sciurus vulgaris": {
+   "taxonId": 46001,
+   "order": "Rodentia",
+   "family": "Sciuridae"
+  },
+  "Tamiops maritimus": {
+   "taxonId": 46168,
+   "order": "Rodentia",
+   "family": "Sciuridae"
+  },
+  "Duttaphrynus melanostictus": {
+   "taxonId": 62345,
+   "order": "Anura",
+   "family": "Bufonidae"
+  },
+  "Papio cynocephalus": {
+   "taxonId": 67683,
+   "order": "Primates",
+   "family": "Cercopithecidae"
+  },
+  "Alopochen aegyptiaca": {
+   "taxonId": 72486,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Anas zonorhyncha": {
+   "taxonId": 72504,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Cyanopica cyanus": {
+   "taxonId": 72785,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Ketupa blakistoni": {
+   "taxonId": 72965,
+   "order": "Strigiformes",
+   "family": "Strigidae"
+  },
+  "Lamprotornis purpuroptera": {
+   "taxonId": 72967,
+   "order": "Passeriformes",
+   "family": "Sturnidae"
+  },
+  "Phoenicopterus roseus": {
+   "taxonId": 73222,
+   "order": "Phoenicopteriformes",
+   "family": "Phoenicopteridae"
+  },
+  "Eudorcas thomsonii": {
+   "taxonId": 74321,
+   "order": "Artiodactyla",
+   "family": "Bovidae"
+  },
+  "Papio anubis": {
+   "taxonId": 74832,
+   "order": "Primates",
+   "family": "Cercopithecidae"
+  },
+  "Physeter macrocephalus": {
+   "taxonId": 74890,
+   "order": "Artiodactyla",
+   "family": "Physeteridae"
+  },
+  "Anolis sagrei": {
+   "taxonId": 116461,
+   "order": "Squamata",
+   "family": "Anolidae"
+  },
+  "Cacatua sanguinea": {
+   "taxonId": 116838,
+   "order": "Psittaciformes",
+   "family": "Cacatuidae"
+  },
+  "Pica hudsonia": {
+   "taxonId": 143853,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Ardea alba": {
+   "taxonId": 144455,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Chroicocephalus novaehollandiae": {
+   "taxonId": 144507,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Chroicocephalus ridibundus": {
+   "taxonId": 144510,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Poecile palustris": {
+   "taxonId": 144809,
+   "order": "Passeriformes",
+   "family": "Paridae"
+  },
+  "Periparus ater": {
+   "taxonId": 144823,
+   "order": "Passeriformes",
+   "family": "Paridae"
+  },
+  "Cyanistes caeruleus": {
+   "taxonId": 144849,
+   "order": "Passeriformes",
+   "family": "Paridae"
+  },
+  "Phoenicurus fuliginosus": {
+   "taxonId": 145068,
+   "order": "Passeriformes",
+   "family": "Muscicapidae"
+  },
+  "Leptoptilos crumenifer": {
+   "taxonId": 201031,
+   "order": "Ciconiiformes",
+   "family": "Ciconiidae"
+  },
+  "Saxicola rubicola": {
+   "taxonId": 201192,
+   "order": "Passeriformes",
+   "family": "Muscicapidae"
+  },
+  "Cervus elaphus": {
+   "taxonId": 204113,
+   "order": "Artiodactyla",
+   "family": "Cervidae"
+  },
+  "Cervus canadensis": {
+   "taxonId": 204114,
+   "order": "Artiodactyla",
+   "family": "Cervidae"
+  },
+  "Corvus corone": {
+   "taxonId": 204496,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Larus argentatus": {
+   "taxonId": 204533,
+   "order": "Charadriiformes",
+   "family": "Laridae"
+  },
+  "Bos bison": {
+   "taxonId": 208700,
+   "order": "Artiodactyla",
+   "family": "Bovidae"
+  },
+  "Bufo bufo": {
+   "taxonId": 326296,
+   "order": "Anura",
+   "family": "Bufonidae"
+  },
+  "Cyanopica cooki": {
+   "taxonId": 339684,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Parus cinereus": {
+   "taxonId": 339691,
+   "order": "Passeriformes",
+   "family": "Paridae"
+  },
+  "Trochalopteron morrisonianum": {
+   "taxonId": 339867,
+   "order": "Passeriformes",
+   "family": "Leiothrichidae"
+  },
+  "Crocodylus niloticus": {
+   "taxonId": 341972,
+   "order": "Crocodylia",
+   "family": "Crocodylidae"
+  },
+  "Carpodacus formosanus": {
+   "taxonId": 367698,
+   "order": "Passeriformes",
+   "family": "Fringillidae"
+  },
+  "Petroica boodang": {
+   "taxonId": 438022,
+   "order": "Passeriformes",
+   "family": "Petroicidae"
+  },
+  "Buteo japonicus": {
+   "taxonId": 486630,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Antigone canadensis": {
+   "taxonId": 508048,
+   "order": "Gruiformes",
+   "family": "Gruidae"
+  },
+  "Antigone vipio": {
+   "taxonId": 508057,
+   "order": "Gruiformes",
+   "family": "Gruidae"
+  },
+  "Spodiopsar cineraceus": {
+   "taxonId": 547179,
+   "order": "Passeriformes",
+   "family": "Sturnidae"
+  },
+  "Anser caerulescens": {
+   "taxonId": 558426,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Spatula clypeata": {
+   "taxonId": 558438,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Mareca penelope": {
+   "taxonId": 558441,
+   "order": "Anseriformes",
+   "family": "Anatidae"
+  },
+  "Ardea intermedia": {
+   "taxonId": 558445,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Eurocephalus ruppelli": {
+   "taxonId": 558513,
+   "order": "Passeriformes",
+   "family": "Laniidae"
+  },
+  "Buergeria otai": {
+   "taxonId": 710315,
+   "order": "Anura",
+   "family": "Rhacophoridae"
+  },
+  "Agama picticauda": {
+   "taxonId": 797597,
+   "order": "Squamata",
+   "family": "Agamidae"
+  },
+  "Diploderma swinhonis": {
+   "taxonId": 797638,
+   "order": "Squamata",
+   "family": "Agamidae"
+  },
+  "Pica serica": {
+   "taxonId": 827401,
+   "order": "Passeriformes",
+   "family": "Corvidae"
+  },
+  "Agkistrodon conanti": {
+   "taxonId": 904173,
+   "order": "Squamata",
+   "family": "Viperidae"
+  },
+  "Zosterops simplex": {
+   "taxonId": 980257,
+   "order": "Passeriformes",
+   "family": "Zosteropidae"
+  },
+  "Gulosus aristotelis": {
+   "taxonId": 1289604,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Urile pelagicus": {
+   "taxonId": 1289605,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Madoqua cavendishi": {
+   "taxonId": 1430935,
+   "order": "Artiodactyla",
+   "family": "Bovidae"
+  },
+  "Notamacropus eugenii": {
+   "taxonId": 1453434,
+   "order": "Diprotodontia",
+   "family": "Macropodidae"
+  },
+  "Nannopterum auritum": {
+   "taxonId": 1454382,
+   "order": "Suliformes",
+   "family": "Phalacrocoracidae"
+  },
+  "Icthyophaga leucogaster": {
+   "taxonId": 1505653,
+   "order": "Accipitriformes",
+   "family": "Accipitridae"
+  },
+  "Ardea coromanda": {
+   "taxonId": 1585373,
+   "order": "Pelecaniformes",
+   "family": "Ardeidae"
+  },
+  "Aethalodelphis obscurus": {
+   "taxonId": 1664972,
+   "order": "Artiodactyla",
+   "family": "Delphinidae"
+  },
+  "Schoeniclus spodocephalus": {
+   "taxonId": 1720555,
+   "order": "Passeriformes",
+   "family": "Emberizidae"
+  }
+ },
+ "ranks": {
+  "Carnivora": {
+   "rank": "order",
+   "taxonId": 41573,
+   "zhTW": "食肉目",
+   "en": "Carnivorans"
+  },
+  "Canidae": {
+   "rank": "family",
+   "taxonId": 42043,
+   "zhTW": "犬科",
+   "en": "Canids"
+  },
+  "Felidae": {
+   "rank": "family",
+   "taxonId": 41944,
+   "zhTW": "貓科",
+   "en": "Felids"
+  },
+  "Ursidae": {
+   "rank": "family",
+   "taxonId": 41636,
+   "zhTW": "熊科",
+   "en": "Bears"
+  },
+  "Testudines": {
+   "rank": "order",
+   "taxonId": 39532,
+   "zhTW": "龜鱉目",
+   "en": "Turtles and Tortoises"
+  },
+  "Cheloniidae": {
+   "rank": "family",
+   "taxonId": 39657,
+   "zhTW": "蠵龜科",
+   "en": "Typical Sea Turtles"
+  },
+  "Diprotodontia": {
+   "rank": "order",
+   "taxonId": 42711,
+   "zhTW": "雙門齒目",
+   "en": "Kangaroos, Possums, Wombats, and Allies"
+  },
+  "Phascolarctidae": {
+   "rank": "family",
+   "taxonId": 42981,
+   "zhTW": "樹袋熊科",
+   "en": "Koalas"
+  },
+  "Coraciiformes": {
+   "rank": "order",
+   "taxonId": 2114,
+   "zhTW": "佛法僧目",
+   "en": "Rollers, Kingfishers, and Allies"
+  },
+  "Alcedinidae": {
+   "rank": "family",
+   "taxonId": 2314,
+   "zhTW": "翠鳥科",
+   "en": "Kingfishers"
+  },
+  "Proboscidea": {
+   "rank": "order",
+   "taxonId": 43691,
+   "zhTW": "長鼻目",
+   "en": "Proboscideans"
+  },
+  "Elephantidae": {
+   "rank": "family",
+   "taxonId": 43692,
+   "zhTW": "象科",
+   "en": "Elephants"
+  },
+  "Perissodactyla": {
+   "rank": "order",
+   "taxonId": 43327,
+   "zhTW": "奇蹄目",
+   "en": "Odd-toed Ungulates"
+  },
+  "Rhinocerotidae": {
+   "rank": "family",
+   "taxonId": 43341,
+   "zhTW": "犀科",
+   "en": "Rhinoceroses"
+  },
+  "Procyonidae": {
+   "rank": "family",
+   "taxonId": 41660,
+   "zhTW": "浣熊科",
+   "en": "Raccoons, Coatis, and Allies"
+  },
+  "Artiodactyla": {
+   "rank": "order",
+   "taxonId": 152870,
+   "zhTW": "偶蹄目",
+   "en": "Even-toed Ungulates and Cetaceans"
+  },
+  "Cervidae": {
+   "rank": "family",
+   "taxonId": 42158,
+   "zhTW": "鹿科",
+   "en": "Deer"
+  },
+  "Primates": {
+   "rank": "order",
+   "taxonId": 43367,
+   "zhTW": "靈長目",
+   "en": "Primates"
+  },
+  "Cercopithecidae": {
+   "rank": "family",
+   "taxonId": 43443,
+   "zhTW": "獼猴科",
+   "en": "Old World Monkeys"
+  },
+  "Galliformes": {
+   "rank": "order",
+   "taxonId": 573,
+   "zhTW": "雞形目",
+   "en": "Landfowl"
+  },
+  "Phasianidae": {
+   "rank": "family",
+   "taxonId": 574,
+   "zhTW": "雉科",
+   "en": "Pheasants, Grouse, and Allies"
+  },
+  "Passeriformes": {
+   "rank": "order",
+   "taxonId": 7251,
+   "zhTW": "雀形目",
+   "en": "Perching Birds"
+  },
+  "Corvidae": {
+   "rank": "family",
+   "taxonId": 7823,
+   "zhTW": "鴉科",
+   "en": "Crows, Jays, and Magpies"
+  },
+  "Pelecaniformes": {
+   "rank": "order",
+   "taxonId": 67566,
+   "zhTW": "鵜形目",
+   "en": "Pelicans, Herons, Ibises, and Allies"
+  },
+  "Threskiornithidae": {
+   "rank": "family",
+   "taxonId": 3727,
+   "zhTW": "朱鷺科",
+   "en": "Ibises and Spoonbills"
+  },
+  "Pholidota": {
+   "rank": "order",
+   "taxonId": 43357,
+   "zhTW": "鳞甲目",
+   "en": "Pangolins"
+  },
+  "Manidae": {
+   "rank": "family",
+   "taxonId": 43358,
+   "zhTW": "穿山甲科",
+   "en": "Pangolins"
+  },
+  "Strigiformes": {
+   "rank": "order",
+   "taxonId": 19350,
+   "zhTW": "鴞形目",
+   "en": "Owls"
+  },
+  "Strigidae": {
+   "rank": "family",
+   "taxonId": 19728,
+   "zhTW": "鴟鴞科",
+   "en": "Typical Owls"
+  },
+  "Accipitriformes": {
+   "rank": "order",
+   "taxonId": 71261,
+   "zhTW": "鷹形目",
+   "en": "Hawks, Eagles, Kites, and Allies"
+  },
+  "Accipitridae": {
+   "rank": "family",
+   "taxonId": 5067,
+   "zhTW": "鷹科",
+   "en": "Hawks, Eagles, and Kites"
+  },
+  "Piciformes": {
+   "rank": "order",
+   "taxonId": 17550,
+   "zhTW": "鴷形目",
+   "en": "Woodpeckers and Allies"
+  },
+  "Megalaimidae": {
+   "rank": "family",
+   "taxonId": 200962,
+   "zhTW": "鬚鴷科",
+   "en": "Asian Barbets"
+  },
+  "Anura": {
+   "rank": "order",
+   "taxonId": 20979,
+   "zhTW": "無尾目",
+   "en": "Frogs and Toads"
+  },
+  "Rhacophoridae": {
+   "rank": "family",
+   "taxonId": 26279,
+   "zhTW": "樹蛙科",
+   "en": "Old World Tree Frogs"
+  },
+  "Pycnonotidae": {
+   "rank": "family",
+   "taxonId": 14556,
+   "zhTW": "鵯科",
+   "en": "Bulbuls"
+  },
+  "Bovidae": {
+   "rank": "family",
+   "taxonId": 42241,
+   "zhTW": "牛科",
+   "en": "Bovids"
+  },
+  "Mustelidae": {
+   "rank": "family",
+   "taxonId": 41770,
+   "zhTW": "鼬科",
+   "en": "Mustelids"
+  },
+  "Rodentia": {
+   "rank": "order",
+   "taxonId": 43698,
+   "zhTW": "嚙齒目",
+   "en": "Rodents"
+  },
+  "Sciuridae": {
+   "rank": "family",
+   "taxonId": 45933,
+   "zhTW": "松鼠科",
+   "en": "Squirrels"
+  },
+  "Muscicapidae": {
+   "rank": "family",
+   "taxonId": 12704,
+   "zhTW": "鶲科",
+   "en": "Old World Flycatchers, Robins, and Chats"
+  },
+  "Geoemydidae": {
+   "rank": "family",
+   "taxonId": 39886,
+   "zhTW": "地龜科",
+   "en": "Eurasian Pond, River, and Neotropical Wood Turtles"
+  },
+  "Salmoniformes": {
+   "rank": "order",
+   "taxonId": 47521,
+   "zhTW": "鮭形目",
+   "en": "Salmons, Pikes and Mudminnows"
+  },
+  "Salmonidae": {
+   "rank": "family",
+   "taxonId": 47520,
+   "zhTW": "鮭科",
+   "en": "Salmons, Trouts, and Whitefishes"
+  },
+  "Lepidoptera": {
+   "rank": "order",
+   "taxonId": 47157,
+   "zhTW": "鱗翅目",
+   "en": "Butterflies and Moths"
+  },
+  "Nymphalidae": {
+   "rank": "family",
+   "taxonId": 47922,
+   "zhTW": "蛺蝶科",
+   "en": "Brush-footed Butterflies"
+  },
+  "Equidae": {
+   "rank": "family",
+   "taxonId": 43328,
+   "zhTW": "馬科",
+   "en": "Equines"
+  },
+  "Gruiformes": {
+   "rank": "order",
+   "taxonId": 4,
+   "zhTW": "鶴形目",
+   "en": "Cranes, Rails, and Allies"
+  },
+  "Gruidae": {
+   "rank": "family",
+   "taxonId": 23,
+   "zhTW": "鶴科",
+   "en": "Cranes"
+  },
+  "Odontophoridae": {
+   "rank": "family",
+   "taxonId": 1278,
+   "zhTW": null,
+   "en": "New World Quails"
+  },
+  "Coraciidae": {
+   "rank": "family",
+   "taxonId": 2262,
+   "zhTW": null,
+   "en": "Rollers"
+  },
+  "Columbiformes": {
+   "rank": "order",
+   "taxonId": 2708,
+   "zhTW": "鴿形目",
+   "en": "Pigeons and Doves"
+  },
+  "Columbidae": {
+   "rank": "family",
+   "taxonId": 2715,
+   "zhTW": "鳩鴿科",
+   "en": "Pigeons and Doves"
+  },
+  "Charadriiformes": {
+   "rank": "order",
+   "taxonId": 67561,
+   "zhTW": "鴴形目",
+   "en": "Shorebirds and Allies"
+  },
+  "Scolopacidae": {
+   "rank": "family",
+   "taxonId": 3835,
+   "zhTW": "鷸科",
+   "en": "Sandpipers and Allies"
+  },
+  "Procellariiformes": {
+   "rank": "order",
+   "taxonId": 67565,
+   "zhTW": "鸌形目",
+   "en": "Tubenoses"
+  },
+  "Diomedeidae": {
+   "rank": "family",
+   "taxonId": 67526,
+   "zhTW": "信天翁科",
+   "en": "Albatrosses"
+  },
+  "Procellariidae": {
+   "rank": "family",
+   "taxonId": 4020,
+   "zhTW": "鸌科",
+   "en": "Shearwaters and Petrels"
+  },
+  "Podicipediformes": {
+   "rank": "order",
+   "taxonId": 67563,
+   "zhTW": "鸊鷉目",
+   "en": "Grebes"
+  },
+  "Podicipedidae": {
+   "rank": "family",
+   "taxonId": 4203,
+   "zhTW": "鸊鷉科",
+   "en": "Grebes"
+  },
+  "Suliformes": {
+   "rank": "order",
+   "taxonId": 71268,
+   "zhTW": "鰹鳥目",
+   "en": "Gannets, Cormorants, and Allies"
+  },
+  "Phalacrocoracidae": {
+   "rank": "family",
+   "taxonId": 4262,
+   "zhTW": "鸕鶿科",
+   "en": "Cormorants and Shags"
+  },
+  "Pelecanidae": {
+   "rank": "family",
+   "taxonId": 4323,
+   "zhTW": "鵜鶘科",
+   "en": "Pelicans"
+  },
+  "Laridae": {
+   "rank": "family",
+   "taxonId": 4342,
+   "zhTW": "鷗科",
+   "en": "Gulls, Terns, and Skimmers"
+  },
+  "Alcidae": {
+   "rank": "family",
+   "taxonId": 71295,
+   "zhTW": "海雀科",
+   "en": "Auks, Murres, and Puffins"
+  },
+  "Jacanidae": {
+   "rank": "family",
+   "taxonId": 4574,
+   "zhTW": "雉鴴科",
+   "en": "Jacanas"
+  },
+  "Recurvirostridae": {
+   "rank": "family",
+   "taxonId": 71361,
+   "zhTW": "長腳鷸科",
+   "en": "Stilts and Avocets"
+  },
+  "Haematopodidae": {
+   "rank": "family",
+   "taxonId": 71325,
+   "zhTW": null,
+   "en": "Oystercatchers"
+  },
+  "Charadriidae": {
+   "rank": "family",
+   "taxonId": 4783,
+   "zhTW": "鴴科",
+   "en": "Plovers and Lapwings"
+  },
+  "Ardeidae": {
+   "rank": "family",
+   "taxonId": 4929,
+   "zhTW": "鷺科",
+   "en": "Herons, Egrets, and Bitterns"
+  },
+  "Anhingidae": {
+   "rank": "family",
+   "taxonId": 5059,
+   "zhTW": "蛇鵜科",
+   "en": "Darters"
+  },
+  "Anseriformes": {
+   "rank": "order",
+   "taxonId": 6888,
+   "zhTW": "雁形目",
+   "en": "Waterfowl"
+  },
+  "Anatidae": {
+   "rank": "family",
+   "taxonId": 6912,
+   "zhTW": "鴨科",
+   "en": "Ducks, Geese, and Swans"
+  },
+  "Anseranatidae": {
+   "rank": "family",
+   "taxonId": 85585,
+   "zhTW": null,
+   "en": "Magpie Geese"
+  },
+  "Alaudidae": {
+   "rank": "family",
+   "taxonId": 7284,
+   "zhTW": "百靈科",
+   "en": "Larks"
+  },
+  "Certhiidae": {
+   "rank": "family",
+   "taxonId": 7448,
+   "zhTW": "旋木雀科",
+   "en": "Treecreepers"
+  },
+  "Cinclidae": {
+   "rank": "family",
+   "taxonId": 7640,
+   "zhTW": "河烏科",
+   "en": "Dippers"
+  },
+  "Passerellidae": {
+   "rank": "family",
+   "taxonId": 559248,
+   "zhTW": "美洲鵐科",
+   "en": "New World Sparrows"
+  },
+  "Icteridae": {
+   "rank": "family",
+   "taxonId": 11989,
+   "zhTW": "擬黃鸝科",
+   "en": "New World Blackbirds and Orioles"
+  },
+  "Fringillidae": {
+   "rank": "family",
+   "taxonId": 9079,
+   "zhTW": "雀科",
+   "en": "Finches, Euphonias, and Allies"
+  },
+  "Maluridae": {
+   "rank": "family",
+   "taxonId": 12061,
+   "zhTW": "細尾鷯鶯科",
+   "en": "Fairywrens and Allies"
+  },
+  "Passeridae": {
+   "rank": "family",
+   "taxonId": 13685,
+   "zhTW": "麻雀科",
+   "en": "Old World Sparrows"
+  },
+  "Sturnidae": {
+   "rank": "family",
+   "taxonId": 14841,
+   "zhTW": "椋鳥科",
+   "en": "Starlings"
+  },
+  "Leiothrichidae": {
+   "rank": "family",
+   "taxonId": 980192,
+   "zhTW": "噪眉科",
+   "en": "Laughingthrushes and Allies"
+  },
+  "Zosteropidae": {
+   "rank": "family",
+   "taxonId": 17438,
+   "zhTW": "繡眼科",
+   "en": "White-eyes, Yuhinas, and Allies"
+  },
+  "Picidae": {
+   "rank": "family",
+   "taxonId": 17599,
+   "zhTW": "啄木鳥科",
+   "en": "Woodpeckers"
+  },
+  "Struthioniformes": {
+   "rank": "order",
+   "taxonId": 20487,
+   "zhTW": "鴕鳥目",
+   "en": "Ostriches"
+  },
+  "Struthionidae": {
+   "rank": "family",
+   "taxonId": 20523,
+   "zhTW": "鴕鳥科",
+   "en": "Ostriches"
+  },
+  "Ranidae": {
+   "rank": "family",
+   "taxonId": 25473,
+   "zhTW": "赤蛙科",
+   "en": "Typical Frogs"
+  },
+  "Dicroglossidae": {
+   "rank": "family",
+   "taxonId": 64723,
+   "zhTW": "叉舌蛙科",
+   "en": "Fork-tongued Frogs"
+  },
+  "Crocodylia": {
+   "rank": "order",
+   "taxonId": 26039,
+   "zhTW": "鱷目",
+   "en": "Crocodilians"
+  },
+  "Crocodylidae": {
+   "rank": "family",
+   "taxonId": 26041,
+   "zhTW": "鱷科",
+   "en": "Crocodiles"
+  },
+  "Alligatoridae": {
+   "rank": "family",
+   "taxonId": 121038,
+   "zhTW": "短吻鱷科/鼉科",
+   "en": "Alligators and Caimans"
+  },
+  "Squamata": {
+   "rank": "order",
+   "taxonId": 26172,
+   "zhTW": "有鱗目",
+   "en": "Snakes and Lizards"
+  },
+  "Viperidae": {
+   "rank": "family",
+   "taxonId": 30667,
+   "zhTW": "蝮蛇科",
+   "en": "Vipers"
+  },
+  "Agamidae": {
+   "rank": "family",
+   "taxonId": 31096,
+   "zhTW": "飛蜥科",
+   "en": "Dragons"
+  },
+  "Anolidae": {
+   "rank": "family",
+   "taxonId": 200152,
+   "zhTW": "變色蜥科",
+   "en": "Anoles"
+  },
+  "Scincidae": {
+   "rank": "family",
+   "taxonId": 36982,
+   "zhTW": "石龍子科",
+   "en": "Skinks"
+  },
+  "Varanidae": {
+   "rank": "family",
+   "taxonId": 39392,
+   "zhTW": "巨蜥科",
+   "en": "Monitor Lizards"
+  },
+  "Trionychidae": {
+   "rank": "family",
+   "taxonId": 39539,
+   "zhTW": "鱉科",
+   "en": "Softshell and Flapshell Turtles"
+  },
+  "Emydidae": {
+   "rank": "family",
+   "taxonId": 39760,
+   "zhTW": "水龜科",
+   "en": "Pond and Box Turtles"
+  },
+  "Otariidae": {
+   "rank": "family",
+   "taxonId": 41736,
+   "zhTW": "海獅科",
+   "en": "Eared Seals"
+  },
+  "Hyaenidae": {
+   "rank": "family",
+   "taxonId": 41884,
+   "zhTW": "鬣狗科",
+   "en": "Hyaenas"
+  },
+  "Tayassuidae": {
+   "rank": "family",
+   "taxonId": 42111,
+   "zhTW": "西貒科",
+   "en": "Peccaries"
+  },
+  "Hippopotamidae": {
+   "rank": "family",
+   "taxonId": 42146,
+   "zhTW": "河馬科",
+   "en": "Hippopotamuses"
+  },
+  "Antilocapridae": {
+   "rank": "family",
+   "taxonId": 42427,
+   "zhTW": "叉角羚科",
+   "en": "Pronghorns"
+  },
+  "Hyracoidea": {
+   "rank": "order",
+   "taxonId": 43083,
+   "zhTW": "蹄兔目",
+   "en": "Hyraxes"
+  },
+  "Procaviidae": {
+   "rank": "family",
+   "taxonId": 43084,
+   "zhTW": null,
+   "en": "Hyraxes"
+  },
+  "Bufonidae": {
+   "rank": "family",
+   "taxonId": 21359,
+   "zhTW": "蟾蜍科",
+   "en": "True Toads"
+  },
+  "Phoenicopteriformes": {
+   "rank": "order",
+   "taxonId": 67569,
+   "zhTW": null,
+   "en": "Flamingos"
+  },
+  "Phoenicopteridae": {
+   "rank": "family",
+   "taxonId": 4255,
+   "zhTW": "紅鶴科",
+   "en": "Flamingos"
+  },
+  "Physeteridae": {
+   "rank": "family",
+   "taxonId": 41434,
+   "zhTW": "抹香鯨科",
+   "en": "True Sperm Whales"
+  },
+  "Psittaciformes": {
+   "rank": "order",
+   "taxonId": 18874,
+   "zhTW": "鸚形目",
+   "en": "Parrots"
+  },
+  "Cacatuidae": {
+   "rank": "family",
+   "taxonId": 119157,
+   "zhTW": "鳳頭鸚鵡科",
+   "en": "Cockatoos"
+  },
+  "Paridae": {
+   "rank": "family",
+   "taxonId": 13547,
+   "zhTW": "山雀科",
+   "en": "Tits, Chickadees, and Titmice"
+  },
+  "Ciconiiformes": {
+   "rank": "order",
+   "taxonId": 3726,
+   "zhTW": "鸛形目",
+   "en": "Storks"
+  },
+  "Ciconiidae": {
+   "rank": "family",
+   "taxonId": 4730,
+   "zhTW": "鸛科",
+   "en": "Storks"
+  },
+  "Petroicidae": {
+   "rank": "family",
+   "taxonId": 14149,
+   "zhTW": null,
+   "en": "Australasian Robins"
+  },
+  "Laniidae": {
+   "rank": "family",
+   "taxonId": 12015,
+   "zhTW": "伯勞科",
+   "en": "Shrikes"
+  },
+  "Macropodidae": {
+   "rank": "family",
+   "taxonId": 42864,
+   "zhTW": "袋鼠科",
+   "en": "Kangaroos, Wallabies and Allies"
+  },
+  "Delphinidae": {
+   "rank": "family",
+   "taxonId": 41479,
+   "zhTW": "海豚科",
+   "en": "Oceanic Dolphins"
+  },
+  "Emberizidae": {
+   "rank": "family",
+   "taxonId": 559249,
+   "zhTW": "鵐科",
+   "en": "Old World Buntings"
+  }
+ }
+}

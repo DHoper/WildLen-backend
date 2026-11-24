@@ -1,73 +1,33 @@
-import app from './app';
-import { PrismaClient } from '@prisma/client';
-import { v2 as cloudinary } from 'cloudinary';
+import { env } from './config/env'
+import { createApp } from './app'
+import { prisma } from './lib/prisma'
+import { logger } from './lib/logger'
+import { purgeOrphanImages } from './modules/images/image.service'
 
-// 配置 Cloudinary
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  api_key: process.env.CLOUDINARY_KEY,
-  api_secret: process.env.CLOUDINARY_SECRET,
-});
+const app = createApp()
 
-// 刪除 Cloudinary 圖片的函數
-async function deleteCloudinaryImage(publicId: string): Promise<void> {
+const server = app.listen(env.PORT, () => {
+  logger.info(`🦌 WildLens API listening on http://localhost:${env.PORT} (v1 at /api/v1)`)
+  if (!env.cloudinaryEnabled) logger.info('Cloudinary not configured — storing uploads in ./uploads')
+  if (!env.RESEND_API_KEY) logger.info('RESEND_API_KEY not set — e-mails are logged instead of sent')
+})
 
-  try {
-    const aaa = await cloudinary.uploader.destroy(publicId);
+// Hourly sweep of uploads that were never attached to a post.
+const sweep = setInterval(
+  () => {
+    purgeOrphanImages()
+      .then((n) => n && logger.info(`🧹 Purged ${n} orphan image(s)`))
+      .catch((err) => logger.error({ err }, 'Orphan image sweep failed'))
+  },
+  60 * 60 * 1000
+)
+sweep.unref()
 
-    console.log(`成功刪除 Cloudinary 圖片：${publicId}`);
-  } catch (error) {
-    console.error(`刪除 Cloudinary 圖片失敗：${publicId}`, error);
-  }
+const shutdown = async (signal: string) => {
+  logger.info(`${signal} received, shutting down…`)
+  server.close()
+  await prisma.$disconnect()
+  process.exit(0)
 }
-
-// 初始化 Prisma Client 並設置擴展
-export const prisma = new PrismaClient({
-  omit: {
-    user: {
-      password: true
-    }
-  }
-}).$extends({
-  query: {
-    image: {
-      async delete({ model, operation, args, query }) {
-        const image = await prisma.image.findUnique({
-          where: args.where,
-          select: { publicId: true },
-        });
-
-        if (image?.publicId) {
-          await deleteCloudinaryImage(image.publicId);
-        }
-
-        const result = await query(args);
-
-        return result;
-      },
-
-      async deleteMany({ model, operation, args, query }) {
-        const images = await prisma.image.findMany({
-          where: args.where,
-          select: { publicId: true },
-        });
-
-        for (const image of images) {
-          if (image.publicId) {
-            await deleteCloudinaryImage(image.publicId);
-          }
-        }
-
-        const result = await query(args);
-
-        return result;
-      }
-    }
-  }
-});
-
-const PORT = process.env.PORT || 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
-});
+process.on('SIGINT', () => void shutdown('SIGINT'))
+process.on('SIGTERM', () => void shutdown('SIGTERM'))

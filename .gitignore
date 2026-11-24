@@ -1,3 +1,11 @@
 node_modules
-# Keep environment variables out of version control
+dist
 .env
+.env.*
+!.env.example
+uploads
+.tmp
+*.log
+
+# iNaturalist raw API responses (re-fetchable; the curated lists live in prisma/data)
+scripts/.cache/

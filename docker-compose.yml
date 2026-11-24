@@ -1,0 +1,65 @@
+# Local production-like stack: PostgreSQL + the API.
+#
+#   JWT_SECRET=$(openssl rand -base64 48) docker compose up --build
+#   docker compose run --rm seed                  # optional: admin + species catalogue
+#   docker compose run --rm seed --demo           # …plus demo content
+#
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: wildlen
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U postgres -d wildlen']
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  api:
+    build: .
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - '3000:3000'
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/wildlen
+      JWT_SECRET: ${JWT_SECRET:?Set JWT_SECRET (at least 32 characters)}
+      PUBLIC_URL: ${PUBLIC_URL:-http://localhost:3000}
+      APP_URL: ${APP_URL:-http://localhost:5173}
+      CORS_ORIGINS: ${CORS_ORIGINS:-http://localhost:5173,http://localhost:4000}
+      REQUIRE_EMAIL_VERIFICATION: ${REQUIRE_EMAIL_VERIFICATION:-false}
+      RESEND_API_KEY: ${RESEND_API_KEY:-}
+      MAIL_FROM: ${MAIL_FROM:-WildLens <no-reply@wildlens.dev>}
+      CLOUDINARY_CLOUD_NAME: ${CLOUDINARY_CLOUD_NAME:-}
+      CLOUDINARY_KEY: ${CLOUDINARY_KEY:-}
+      CLOUDINARY_SECRET: ${CLOUDINARY_SECRET:-}
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@wildlens.dev}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-change-me-please}
+    volumes:
+      - uploads:/app/uploads
+
+  # One-off seeding (uses the build stage, which has the dev tooling).
+  seed:
+    build:
+      context: .
+      target: build
+    profiles: ['tools']
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/wildlen
+      ADMIN_EMAIL: ${ADMIN_EMAIL:-admin@wildlens.dev}
+      ADMIN_PASSWORD: ${ADMIN_PASSWORD:-change-me-please}
+    entrypoint: ['npx', 'tsx', 'prisma/seed.ts']
+
+volumes:
+  pgdata:
+  uploads:
